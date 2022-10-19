@@ -1,6 +1,7 @@
 package com.steve_md.joomia.ui
 
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -17,7 +18,7 @@ class SplashScreenFragment : Fragment() {
 
     // binding
     private lateinit var binding: FragmentSplashScreenBinding
-    private val viewModel : SplashViewModel by viewModels()
+    // private val viewModel : SplashViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,10 +28,14 @@ class SplashScreenFragment : Fragment() {
 
        binding = FragmentSplashScreenBinding.inflate(inflater, container, false)
 
-        viewModel._liveData.observe(viewLifecycleOwner) {
+//        viewModel._liveData.observe(viewLifecycleOwner) {
+//            findNavController().navigate(R.id.action_splashScreenFragment_to_mainActivity)
+//        }
+//        viewModel.setValue()
+        Handler().postDelayed({
             findNavController().navigate(R.id.action_splashScreenFragment_to_mainActivity)
-        }
-        viewModel.setValue()
+        }, 3000
+        )
 
         return binding.root
     }
