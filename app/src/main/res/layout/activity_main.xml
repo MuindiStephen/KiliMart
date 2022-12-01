@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
 
 
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.activities.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

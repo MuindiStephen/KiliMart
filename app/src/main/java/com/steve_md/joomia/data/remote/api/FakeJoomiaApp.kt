@@ -1,9 +1,7 @@
-package com.steve_md.joomia.network.api
+package com.steve_md.joomia.data.remote.api
 
-import com.steve_md.joomia.util.Constants.BASE_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 
 object FakeJoomiaApp {
     private var retrofit = Retrofit.Builder()
