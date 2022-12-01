@@ -1,4 +1,4 @@
-package com.steve_md.joomia.ui
+package com.steve_md.joomia.ui.fragments
 
 import android.os.Bundle
 import android.os.Handler
@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
 import com.steve_md.joomia.R
 import com.steve_md.joomia.databinding.FragmentSplashScreenBinding
+import com.steve_md.joomia.util.ApiStates
 import com.steve_md.joomia.viewmodel.SplashViewModel
 
 class SplashScreenFragment : Fragment() {
@@ -32,7 +33,10 @@ class SplashScreenFragment : Fragment() {
 //            findNavController().navigate(R.id.action_splashScreenFragment_to_mainActivity)
 //        }
 //        viewModel.setValue()
-        Handler().postDelayed({
+
+
+        Handler().postDelayed(
+            {
             findNavController().navigate(R.id.action_splashScreenFragment_to_mainActivity)
         }, 3000
         )

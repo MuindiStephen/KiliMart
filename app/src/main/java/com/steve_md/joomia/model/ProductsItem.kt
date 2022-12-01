@@ -1,21 +1,19 @@
 package com.steve_md.joomia.model
 
 
-import com.google.gson.annotations.SerializedName
+import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import kotlinx.parcelize.Parcelize
 
+
+@Parcelize
+@Entity(tableName = "products")
 data class ProductsItem(
-    @SerializedName("category")
+    @PrimaryKey val id: Int,
     val category: String,
-    @SerializedName("description")
     val description: String,
-    @SerializedName("id")
-    val id: Int,
-    @SerializedName("image")
     val image: String,
-    @SerializedName("price")
     val price: Double,
-    @SerializedName("rating")
-    val rating: Rating,
-    @SerializedName("title")
     val title: String
-)
+) : Parcelable
