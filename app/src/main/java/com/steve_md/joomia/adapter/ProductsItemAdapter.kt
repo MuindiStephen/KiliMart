@@ -3,6 +3,7 @@ package com.steve_md.joomia.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView.OnItemClickListener
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -11,7 +12,8 @@ import com.bumptech.glide.Glide
 import com.steve_md.joomia.databinding.ProductListItemBinding
 import com.steve_md.joomia.model.ProductsItem
 
-class ProductsItemAdapter : ListAdapter<ProductsItem, ProductsItemAdapter.MyViewHolder>(MyDiffUtil) {
+class ProductsItemAdapter (private val itemClickListener: OnItemClickListener):
+    ListAdapter<ProductsItem, ProductsItemAdapter.MyViewHolder>(MyDiffUtil) {
     object MyDiffUtil : DiffUtil.ItemCallback<ProductsItem>(){
         override fun areItemsTheSame(oldItem: ProductsItem, newItem: ProductsItem): Boolean {
             return oldItem == newItem
