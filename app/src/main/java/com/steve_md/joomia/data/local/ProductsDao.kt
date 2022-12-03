@@ -1,5 +1,6 @@
 package com.steve_md.joomia.data.local
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -22,6 +23,9 @@ interface ProductsDao {
     @Query("DELETE FROM products")
     suspend fun deleteAllProducts()
 
+    // Get products from the local db based on the Searching
     @Query("SELECT * FROM products WHERE title LIKE :searchQuery OR price  LIKE :searchQuery")
     fun searchDatabase(searchQuery: String) : Flow<List<ProductsItem>>
+
+
 }
