@@ -1,4 +1,4 @@
-package com.steve_md.joomia.ui.fragments
+package com.steve_md.joomia.ui.fragments.splash
 
 import android.os.Bundle
 import android.os.Handler
