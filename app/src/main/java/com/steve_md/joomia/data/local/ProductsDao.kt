@@ -11,11 +11,14 @@ import kotlinx.coroutines.flow.StateFlow
 
 @Dao
 interface ProductsDao {
+
+    // This function returns a unit that is data got from the network
+    // and saves it in the local cache
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertProducts(products: List<ProductsItem>)
 
     // Fetch all data from the database on local db
-    // coroutines not necessarily needed
+    // coroutines not necessarily needed because the result type is loaded cache from local db
     @Query("SELECT * FROM products")
     fun getAllProducts() : StateFlow<List<ProductsItem>>   // instead can replace it with LiveData
 
@@ -24,6 +27,7 @@ interface ProductsDao {
     suspend fun deleteAllProducts()
 
     // Get products from the local db based on the Searching
+    // Returns a flow of result type
     @Query("SELECT * FROM products WHERE title LIKE :searchQuery OR price  LIKE :searchQuery")
     fun searchDatabase(searchQuery: String) : Flow<List<ProductsItem>>
 

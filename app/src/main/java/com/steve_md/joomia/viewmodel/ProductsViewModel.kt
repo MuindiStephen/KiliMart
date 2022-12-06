@@ -18,8 +18,9 @@ class ProductsViewModel : ViewModel(){
       val products: MutableLiveData<List<ProductsItem>?>?
          get() = _products
 
-      fun getAllProducts()  = viewModelScope.launch{
-         _products?.value = repository.getAllProducts()
+
+    fun getAllProducts()  = viewModelScope.launch{
+          repository.getAllProducts().also { _products?.value = it }
     }
 
 }
