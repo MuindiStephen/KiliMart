@@ -7,6 +7,7 @@ import com.steve_md.joomia.data.remote.api.FakeJoomiaApp.retrofitApi
 import com.steve_md.joomia.data.repository.ProductsRepository
 import com.steve_md.joomia.model.ProductsItem
 import com.steve_md.joomia.util.ApiStates
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -31,9 +32,11 @@ class ProductsViewModel : ViewModel(){
     }
     */
 
-    val products = viewModelScope.launch{
-        repository.getAllProducts().asLiveData()
-    }
+//    val products : Job = viewModelScope.launch{
+//        repository.getAllProducts().asLiveData()
+//    }
+
+    val products = repository.getAllProducts().asLiveData()
 
    /* same as this
    private fun getAllProducts()  = viewModelScope.launch {
