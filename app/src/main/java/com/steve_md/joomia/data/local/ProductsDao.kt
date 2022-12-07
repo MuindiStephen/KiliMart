@@ -20,7 +20,7 @@ interface ProductsDao {
     // Fetch all data from the database on local db
     // coroutines not necessarily needed because the result type is loaded cache from local db
     @Query("SELECT * FROM products")
-    fun getAllProducts() : StateFlow<List<ProductsItem>>   // instead can replace it with LiveData
+    fun getAllProducts() : Flow<List<ProductsItem>>   // instead can replace it with LiveData
 
     // When the device is online, instead cached data will be deleted and replaced with another one
     @Query("DELETE FROM products")

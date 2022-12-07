@@ -1,18 +1,23 @@
-package com.steve_md.joomia.adapter
+package com.steve_md.joomia.adapters
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView.OnItemClickListener
+import androidx.navigation.NavDirections
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
+import com.steve_md.joomia.databinding.FragmentHomeBinding
 import com.steve_md.joomia.databinding.ProductListItemBinding
 import com.steve_md.joomia.model.ProductsItem
+import com.steve_md.joomia.ui.fragments.home.HomeFragment
+import com.steve_md.joomia.ui.fragments.home.HomeFragmentDirections
 
-class ProductsItemAdapter (private val itemClickListener: OnItemClickListener):
+class ProductsItemAdapter :
     ListAdapter<ProductsItem, ProductsItemAdapter.MyViewHolder>(MyDiffUtil) {
     object MyDiffUtil : DiffUtil.ItemCallback<ProductsItem>(){
         override fun areItemsTheSame(oldItem: ProductsItem, newItem: ProductsItem): Boolean {
@@ -32,6 +37,7 @@ class ProductsItemAdapter (private val itemClickListener: OnItemClickListener):
             binding.productTitle.text = product?.title
             Glide.with(binding.productImageBox)
                 .load(product?.image)
+                .centerCrop()
                 .into(binding.productImageBox)
         }
     }
@@ -42,9 +48,14 @@ class ProductsItemAdapter (private val itemClickListener: OnItemClickListener):
         )
     }
 
+
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
        val product = getItem(position)
         holder.bind(product)
+        holder.itemView.setOnClickListener {
+          val directions = HomeFragmentDirections.actionHomeFragmentToProductDetailsFragment(product)
+            it.findNavController().navigate(directions)
+        }
     }
 
 
