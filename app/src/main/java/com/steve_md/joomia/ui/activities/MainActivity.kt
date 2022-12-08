@@ -6,8 +6,10 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.steve_md.joomia.R
 import com.steve_md.joomia.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -15,15 +17,22 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
 
         supportActionBar?.hide()
 
 
-        val navHostFragment =  supportFragmentManager
+        val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
 
         navController = navHostFragment.navController
+
+
+    }
+}
 
 
 
@@ -46,8 +55,7 @@ class MainActivity : AppCompatActivity() {
 
         }) */
 
-        }
-    }
+
 
 //private fun <T> Call<T>.enqueue(callback: Callback<ProductsItem>) {
 //

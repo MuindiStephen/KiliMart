@@ -12,7 +12,10 @@ import com.steve_md.joomia.databinding.FragmentHomeBinding
 import com.steve_md.joomia.util.ApiStates
 import com.steve_md.joomia.util.toast
 import com.steve_md.joomia.viewmodel.ProductsViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
@@ -59,6 +62,7 @@ class HomeFragment : Fragment() {
                 //else -> {}
             }
             productsItemAdapter.submitList(it.data)
+            binding.recyclerView.adapter = productsItemAdapter
         }
 
 

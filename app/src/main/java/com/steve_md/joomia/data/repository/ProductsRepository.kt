@@ -7,8 +7,9 @@ import com.steve_md.joomia.model.ProductsItem
 import com.steve_md.joomia.util.networkBoundResource
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
 
-class ProductsRepository(
+class ProductsRepository @Inject constructor(
     private val apiService: ApiService,
     private val productsDatabase: ProductsDatabase
 ){

@@ -1,13 +1,12 @@
 package com.steve_md.joomia.data.local
 
-import androidx.lifecycle.LiveData
+import android.content.Context
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.steve_md.joomia.model.ProductsItem
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.StateFlow
 
 @Dao
 interface ProductsDao {
@@ -30,6 +29,13 @@ interface ProductsDao {
     // Returns a flow of result type
     @Query("SELECT * FROM products WHERE title LIKE :searchQuery OR price  LIKE :searchQuery")
     fun searchDatabase(searchQuery: String) : Flow<List<ProductsItem>>
+
+
+    /*companion object {
+        fun getDb(): ProductsDatabase {
+            return ProductsDatabase.getDatabase(this)
+        }
+    }*/
 
 
 }

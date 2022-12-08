@@ -12,8 +12,9 @@ import com.bumptech.glide.Glide
 import com.steve_md.joomia.R
 import com.steve_md.joomia.databinding.FragmentProductDetailsBinding
 import com.steve_md.joomia.viewmodel.ProductsViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ProductDetailsFragment : Fragment() {
 
     private lateinit var binding: FragmentProductDetailsBinding

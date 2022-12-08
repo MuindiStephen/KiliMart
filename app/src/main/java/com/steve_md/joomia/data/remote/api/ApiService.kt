@@ -9,4 +9,5 @@ interface ApiService {
    // This function returns the requestType
    @GET("products")
    suspend fun getProducts() : ArrayList<ProductsItem>
+
 }
