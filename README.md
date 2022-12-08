@@ -2,7 +2,8 @@
 Consuming [FAKE STORE API](https://fakestoreapi.com/) to demonstrate online shop store.Built this app using the MVVM architecture, Kotlin Flows, (Uni-directional data flow), dagger hilt, viewmodel, Room  and Kotlin coroutines.
 
 ## App General preview
-
+<img src="preview/demo.png" width="320"/> <img src="preview/demo2.png" width="320"/>
+<img src="preview/demo3.png" width="320"/> <img src="preview/demo4.png" width="320"/>
 
 
 ## Tech Stach & Concepts
