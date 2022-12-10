@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/homeFragment"
+        android:title="Products"
+        android:icon="@drawable/ic_products"/>
+    <item
+        android:id="@+id/addToCartFragmeny"
+        android:title="Cart"
+        android:icon="@drawable/ic_shopping_cart"/>
+    <item
+        android:id="@+id/payFragment"
+        android:title="Pay"
+        android:icon="@drawable/ic_payments"/>
+
 </menu>

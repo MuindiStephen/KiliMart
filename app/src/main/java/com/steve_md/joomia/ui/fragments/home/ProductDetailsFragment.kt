@@ -1,5 +1,6 @@
 package com.steve_md.joomia.ui.fragments.home
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -21,6 +22,7 @@ class ProductDetailsFragment : Fragment() {
     private val viewModel by viewModels<ProductsViewModel>()
     private val args:ProductDetailsFragmentArgs by navArgs()
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -33,7 +35,7 @@ class ProductDetailsFragment : Fragment() {
 
         binding.apply {
             textViewProductName.text = productsItem.title
-            textViewProductPrice.text = productsItem.price.toString()
+            textViewProductPrice.text = "$"+ productsItem.price.toString()
             textViewProductDescription.text = productsItem.description
             Glide.with(requireContext())
                 .load(productsItem.image)

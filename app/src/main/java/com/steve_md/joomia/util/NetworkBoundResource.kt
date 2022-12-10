@@ -4,7 +4,7 @@ import kotlinx.coroutines.flow.*
 
 
 /*An algorithm that provides an easy function
- * to fetch resource from both database ana network
+ * to fetch resource from both database and network
  */
 
 inline fun <ResultType, RequestType> networkBoundResource(
