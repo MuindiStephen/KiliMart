@@ -96,4 +96,11 @@ dependencies {
     implementation "com.google.dagger:hilt-android:2.44"
     kapt "com.google.dagger:hilt-compiler:2.44"
 
+    // Lottie Animations
+    def lottieVersion = "5.2.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    // Shimmer Effect
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
 }

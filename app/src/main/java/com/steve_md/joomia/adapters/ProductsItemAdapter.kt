@@ -3,18 +3,13 @@ package com.steve_md.joomia.adapters
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.AdapterView.OnItemClickListener
-import androidx.navigation.NavDirections
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.steve_md.joomia.databinding.FragmentHomeBinding
 import com.steve_md.joomia.databinding.ProductListItemBinding
 import com.steve_md.joomia.model.ProductsItem
-import com.steve_md.joomia.ui.fragments.home.HomeFragment
 import com.steve_md.joomia.ui.fragments.home.HomeFragmentDirections
 
 class ProductsItemAdapter :

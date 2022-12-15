@@ -13,6 +13,7 @@ import com.steve_md.joomia.util.ApiStates
 import com.steve_md.joomia.util.toast
 import com.steve_md.joomia.viewmodel.ProductsViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import timber.log.Timber
 
 
 @AndroidEntryPoint
@@ -63,6 +64,7 @@ class HomeFragment : Fragment() {
             }
             productsItemAdapter.submitList(it.data)
             binding.recyclerView.adapter = productsItemAdapter
+            Timber.i("Data Fetched successfully")
         }
 
 

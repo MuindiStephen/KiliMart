@@ -1,17 +1,20 @@
 package com.steve_md.joomia.data.local
 
-import android.content.Context
 import androidx.room.Database
-import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.steve_md.joomia.model.ProductsItem
 
 
 @Database(exportSchema = false, version = 1, entities = [ProductsItem::class])
+@TypeConverters
 abstract class ProductsDatabase : RoomDatabase() {
 
     // calling ProductsDao
     abstract fun productsDao(): ProductsDao
+
+    // calling CartDao
+    abstract fun cartDao(): CartDao
 
    /* companion object {
 

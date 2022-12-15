@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.room.Room
 import com.steve_md.joomia.data.local.ProductsDao
 import com.steve_md.joomia.data.local.ProductsDatabase
+import com.steve_md.joomia.data.repository.CartRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -27,6 +28,13 @@ object DatabaseModule {
     @Singleton
     fun providesProductsDao(productsDatabase: ProductsDatabase) : ProductsDao {
         return productsDatabase.productsDao()
+    }
+
+
+    @Provides
+    @Singleton
+    fun provideCartRepository(productsDatabase: ProductsDatabase): CartRepository {
+        return CartRepository(productsDatabase)
     }
 
 }
