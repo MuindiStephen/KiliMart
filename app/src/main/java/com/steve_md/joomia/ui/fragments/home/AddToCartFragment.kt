@@ -11,6 +11,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.core.view.isEmpty
+import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
@@ -51,14 +53,36 @@ class AddToCartFragment : Fragment() {
    *Getting all cart items */
         cartViewModel.cartLineItems.observe(viewLifecycleOwner) { cartItem ->
             cartAdapter.submitList(cartItem)
-            binding.cartLineItemsRecyclerView.adapter = cartAdapter
+
+          binding.cartLineItemsRecyclerView.adapter = cartAdapter
+
+
+            if (cartAdapter.itemCount == 0) {
+                binding.cartImage.isVisible = true
+                binding.textViewNoCartItem.isVisible = true
+                binding.buttonStartShopping.isVisible = true
+            }
+
+            /*if (binding.cartLineItemsRecyclerView.adapter?.itemCount == 0){
+                binding.cartImage.isVisible = true
+                binding.textViewNoCartItem.isVisible = true
+                binding.buttonStartShopping.isVisible = true
+            }*/
         }
 
         /*
         *Handling deleting an item from the cart */
         cartAdapter = CartAdapter(CartAdapter.OnClickListener { cartItem->
             cartViewModel.removeOnlyOneItemFromCartLine(cartItem)
+
+            if (cartAdapter.itemCount == 0) {
+                binding.cartImage.isVisible = true
+                binding.textViewNoCartItem.isVisible = true
+                binding.buttonStartShopping.isVisible = true
+            }
         })
+
+
 
 
 
@@ -69,6 +93,17 @@ class AddToCartFragment : Fragment() {
         }
 
     }
+
+    private fun checkCartQuantity(): Boolean {
+
+            if (binding.cartLineItemsRecyclerView.adapter?.itemCount == 0){
+                binding.cartImage.isVisible = true
+                binding.textViewNoCartItem.isVisible = true
+                binding.buttonStartShopping.isVisible = true
+            }
+        return false
+        }
+
 
 
 }
