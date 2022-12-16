@@ -37,9 +37,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
-
+        
         productsViewModel.products.observe(viewLifecycleOwner) {
             when(it){
                 is ApiStates.Error -> {

@@ -8,8 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
+import com.steve_md.joomia.R
 import com.steve_md.joomia.databinding.FragmentProductDetailsBinding
 import com.steve_md.joomia.viewmodel.CartViewModel
 import com.steve_md.joomia.viewmodel.ProductsViewModel
@@ -48,11 +50,16 @@ class ProductDetailsFragment : Fragment() {
         binding.buttonAddToCart.setOnClickListener {
             viewModel.insertItemToCartLine(productsItem)
             itemAddedToCart()
+            navigateToCheckout()
         }
 
 
         val root = binding.root
         return root
+    }
+
+    private fun navigateToCheckout() {
+        findNavController().navigate(R.id.action_productDetailsFragment_to_addToCartFragment)
     }
 
     private fun itemAddedToCart() {
