@@ -11,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.core.view.isEmpty
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
@@ -54,14 +55,8 @@ class AddToCartFragment : Fragment() {
         cartViewModel.cartLineItems.observe(viewLifecycleOwner) { cartItem ->
             cartAdapter.submitList(cartItem)
 
-          binding.cartLineItemsRecyclerView.adapter = cartAdapter
 
-
-            if (cartAdapter.itemCount == 0) {
-                binding.cartImage.isVisible = true
-                binding.textViewNoCartItem.isVisible = true
-                binding.buttonStartShopping.isVisible = true
-            }
+            checkCartQuantity()
 
             /*if (binding.cartLineItemsRecyclerView.adapter?.itemCount == 0){
                 binding.cartImage.isVisible = true
@@ -70,16 +65,13 @@ class AddToCartFragment : Fragment() {
             }*/
         }
 
+
+
         /*
         *Handling deleting an item from the cart */
         cartAdapter = CartAdapter(CartAdapter.OnClickListener { cartItem->
             cartViewModel.removeOnlyOneItemFromCartLine(cartItem)
 
-            if (cartAdapter.itemCount == 0) {
-                binding.cartImage.isVisible = true
-                binding.textViewNoCartItem.isVisible = true
-                binding.buttonStartShopping.isVisible = true
-            }
         })
 
 
@@ -88,21 +80,26 @@ class AddToCartFragment : Fragment() {
 
        // val callBack = requireActivity().onBackPressedDispatcher.addCallback(this)
 
-        binding.buttonCheckout.setOnClickListener {
-            findNavController().navigate(R.id.action_addToCartFragment_to_paymentFragment)
-        }
+
 
     }
 
-    private fun checkCartQuantity(): Boolean {
+    private fun checkCartQuantity() {
 
-            if (binding.cartLineItemsRecyclerView.adapter?.itemCount == 0){
-                binding.cartImage.isVisible = true
-                binding.textViewNoCartItem.isVisible = true
-                binding.buttonStartShopping.isVisible = true
+        if (cartAdapter.itemCount == 0) {
+            Toast.makeText(requireContext(), "Cart Empty", Toast.LENGTH_SHORT).show()
+
+            binding.cartImage.isVisible = true
+            binding.textViewNoCartItem.isVisible = true
+            binding.buttonStartShopping.isVisible = true
+            binding.buttonCheckout.isEnabled = false
+        } else {
+            binding.cartLineItemsRecyclerView.adapter = cartAdapter
+            binding.buttonCheckout.setOnClickListener {
+                findNavController().navigate(R.id.action_addToCartFragment_to_paymentFragment)
             }
-        return false
         }
+    }
 
 
 
