@@ -7,7 +7,7 @@ import com.steve_md.joomia.data.local.entity.CartEntity
 import com.steve_md.joomia.model.ProductsItem
 
 
-@Database(exportSchema = false, version = 1, entities = [ProductsItem::class, CartEntity::class])
+@Database(exportSchema = false, version = 2, entities = [ProductsItem::class, CartEntity::class])
 @TypeConverters
 abstract class ProductsDatabase : RoomDatabase() {
 
