@@ -6,10 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.steve_md.joomia.databinding.FragmentProductDetailsBinding
+import com.steve_md.joomia.viewmodel.CartViewModel
 import com.steve_md.joomia.viewmodel.ProductsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -17,7 +19,9 @@ import dagger.hilt.android.AndroidEntryPoint
 class ProductDetailsFragment : Fragment() {
 
     private lateinit var binding: FragmentProductDetailsBinding
-    private val viewModel by viewModels<ProductsViewModel>()
+    private val viewModel by viewModels<CartViewModel>()
+
+
     private val args:ProductDetailsFragmentArgs by navArgs()
 
     @SuppressLint("SetTextI18n")
@@ -42,11 +46,21 @@ class ProductDetailsFragment : Fragment() {
         }
 
         binding.buttonAddToCart.setOnClickListener {
-
+            viewModel.insertItemToCartLine(productsItem)
+            itemAddedToCart()
         }
+
 
         val root = binding.root
         return root
+    }
+
+    private fun itemAddedToCart() {
+        Toast.makeText(
+            requireContext(),
+            "Item has been added to cart",
+            Toast.LENGTH_LONG
+        ).show()
     }
 
 
