@@ -13,7 +13,7 @@ import com.steve_md.joomia.data.local.entity.CartEntity
 import com.steve_md.joomia.databinding.CartItemRowBinding
 
 class CartAdapter (
-    private val onClickListener: OnClickListener
+    //private val onClickListener: OnClickListener
         )
     : ListAdapter<CartEntity, CartAdapter.CartViewHolder>(CartDiffUtil){
     object CartDiffUtil : DiffUtil.ItemCallback<CartEntity>() {
