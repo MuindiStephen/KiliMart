@@ -24,8 +24,7 @@
         <action
             android:id="@+id/action_homeFragment_to_productDetailsFragment"
             app:destination="@id/productDetailsFragment"
-            app:popUpTo="@id/homeFragment"
-            app:popUpToInclusive="true" />
+            app:popUpToInclusive="false" />
 
     </fragment>
     <fragment
@@ -51,6 +50,9 @@
         <action
             android:id="@+id/action_addToCartFragment_to_paymentFragment"
             app:destination="@id/paymentFragment" />
+        <action
+            android:id="@+id/action_addToCartFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/paymentFragment"
