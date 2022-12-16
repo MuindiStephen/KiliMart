@@ -7,10 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.navigation.NavArgs
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
-import com.steve_md.joomia.R
 import com.steve_md.joomia.databinding.FragmentProductDetailsBinding
 import com.steve_md.joomia.viewmodel.ProductsViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -35,7 +33,7 @@ class ProductDetailsFragment : Fragment() {
 
         binding.apply {
             textViewProductName.text = productsItem.title
-            textViewProductPrice.text = "$"+ productsItem.price.toString()
+            textViewProductPrice.text = "$" + productsItem.price.toString()
             textViewProductDescription.text = productsItem.description
             Glide.with(requireContext())
                 .load(productsItem.image)
@@ -47,7 +45,8 @@ class ProductDetailsFragment : Fragment() {
 
         }
 
-        return binding.root
+        val root = binding.root
+        return root
     }
 
 
