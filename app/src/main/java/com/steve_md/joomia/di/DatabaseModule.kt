@@ -2,6 +2,7 @@ package com.steve_md.joomia.di
 
 import android.app.Application
 import androidx.room.Room
+import androidx.room.migration.Migration
 import com.steve_md.joomia.data.local.ProductsDao
 import com.steve_md.joomia.data.local.ProductsDatabase
 import com.steve_md.joomia.data.repository.CartRepository
@@ -21,6 +22,8 @@ object DatabaseModule {
     fun providesRoomDatabase(context: Application) : ProductsDatabase {
          return Room.databaseBuilder(context, ProductsDatabase::class.java, "products.db")
              .allowMainThreadQueries()  // without blocking the main thread
+             .fallbackToDestructiveMigration() //  Want database to not be cleared when upgrading versions from 1_2
+            // .addMigrations()
              .build()
     }
 

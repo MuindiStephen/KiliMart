@@ -21,6 +21,7 @@ class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
     private val productsViewModel by viewModels<ProductsViewModel>()
+    private val productsItemAdapter by lazy { ProductsItemAdapter() }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,7 +38,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val productsItemAdapter by lazy { ProductsItemAdapter() }
+
 
         productsViewModel.products.observe(viewLifecycleOwner) {
             when(it){
