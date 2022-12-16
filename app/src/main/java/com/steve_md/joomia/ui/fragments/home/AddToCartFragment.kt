@@ -29,8 +29,8 @@ class AddToCartFragment : Fragment() {
 
     private lateinit var binding: FragmentAddToCartBinding
 
+    private lateinit var cartAdapter : CartAdapter
 
-    private val cartAdapter by lazy { CartAdapter() }
     private val cartViewModel by viewModels<CartViewModel>()
 
     override fun onCreateView(
@@ -47,14 +47,18 @@ class AddToCartFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
     
-    // Getting all cart items
+    /*
+   *Getting all cart items */
         cartViewModel.cartLineItems.observe(viewLifecycleOwner) { cartItem ->
             cartAdapter.submitList(cartItem)
             binding.cartLineItemsRecyclerView.adapter = cartAdapter
         }
 
-
-        val removeButton:Button = view.findViewById(R.id.buttonRemoveCartItem)
+        /*
+        *Handling deleting an item from the cart */
+        cartAdapter = CartAdapter(CartAdapter.OnClickListener { cartItem->
+            cartViewModel.removeOnlyOneItemFromCartLine(cartItem)
+        })
 
 
 

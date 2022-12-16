@@ -30,7 +30,6 @@ class CartAdapter (
     inner class CartViewHolder(private val binding:CartItemRowBinding) :  RecyclerView.ViewHolder(binding.root) {
 
         val deleteItemFromCartLine = binding.buttonRemoveCartItem
-
         @SuppressLint("SetTextI18n")
         fun bind(cartLineItem: CartEntity?) {
             Glide.with(binding.imageView3).load(cartLineItem?.image)
