@@ -59,9 +59,12 @@ class HomeFragment : Fragment() {
     }
 
 
+
+//TODO setOnSearchActionListener(object : OnSearchActionListener with searchBar + dependency
     private fun buttonSearchFilterFunctionality(text:String) {
-        binding.searchView2.setOnSearchClickListener {
-            searchFilterProducts(text)
+        binding.searchView2.setOnSearchClickListener{
+            subscribeToProductsObserver()
+             searchFilterProducts(text)
         }
     }
 
