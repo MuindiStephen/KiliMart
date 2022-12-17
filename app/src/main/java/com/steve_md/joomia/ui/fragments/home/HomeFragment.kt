@@ -9,6 +9,7 @@
 package com.steve_md.joomia.ui.fragments.home
 
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +17,7 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.steve_md.joomia.R
 import com.steve_md.joomia.adapters.ProductsItemAdapter
 import com.steve_md.joomia.databinding.FragmentHomeBinding
 import com.steve_md.joomia.util.ApiStates
@@ -39,6 +41,9 @@ class HomeFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        binding.searchView2.setBackgroundColor(Color.WHITE)
+        //binding.searchView2.setBackgroundResource(R.drawable.background_search)
 
         return binding.root
 
