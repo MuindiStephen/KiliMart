@@ -1,5 +1,6 @@
 package com.steve_md.joomia.viewmodel
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import com.steve_md.joomia.data.repository.ProductsRepository
@@ -16,8 +17,8 @@ class ProductsViewModel @Inject constructor(
 
     val products = productsRepository.getAllProducts().asLiveData()
 
-    fun searchProductsFromLocalDatabase(searchQuery: String) : Flow<List<ProductsItem>> {
-        return productsRepository.searchDatabase(searchQuery)
+    fun searchProductsFromLocalDatabase(searchQuery: String) : LiveData<List<ProductsItem>> {
+        return productsRepository.searchDatabase(searchQuery).asLiveData()
     }
 }
 
