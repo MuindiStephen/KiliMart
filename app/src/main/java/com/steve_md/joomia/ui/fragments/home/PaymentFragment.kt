@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2022. Stephen Muindi
+ */
+
 package com.steve_md.joomia.ui.fragments.home
 
 import android.os.Bundle

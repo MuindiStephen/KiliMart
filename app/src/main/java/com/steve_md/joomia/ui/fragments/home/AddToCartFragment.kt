@@ -75,11 +75,7 @@ class AddToCartFragment : Fragment() {
         })
 
 
-
-
-
        // val callBack = requireActivity().onBackPressedDispatcher.addCallback(this)
-
 
 
     }
@@ -88,6 +84,10 @@ class AddToCartFragment : Fragment() {
 
         if (cartAdapter.itemCount == 0) {
             Toast.makeText(requireContext(), "Cart Empty", Toast.LENGTH_SHORT).show()
+
+            binding.cartLineItemsRecyclerView.visibility = View.GONE
+
+            binding.cartLineItemsRecyclerView.removeView(view)
 
             binding.cartImage.isVisible = true
             binding.textViewNoCartItem.isVisible = true
