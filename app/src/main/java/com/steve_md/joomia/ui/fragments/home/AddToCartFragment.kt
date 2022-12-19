@@ -46,7 +46,8 @@ class AddToCartFragment : Fragment() {
         // Inflate the layout for this fragment
         val inflate = FragmentAddToCartBinding.inflate(inflater, container, false)
         binding = inflate
-        return binding.root
+        val root = binding.root
+        return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
