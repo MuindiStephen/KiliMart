@@ -100,22 +100,26 @@ class AddToCartFragment : Fragment() {
         } else {
             binding.cartLineItemsRecyclerView.adapter = cartAdapter
             binding.buttonCheckout.setOnClickListener {
-               AlertDialog.Builder(requireActivity())
-                   .setTitle("PAY")
-                   .setMessage("Are you sure you want to pay ?")
-                   .setPositiveButton("Yes") { _, _ ->
-                       findNavController().navigate(R.id.action_addToCartFragment_to_paymentFragment)
-                   }
-                   .setNegativeButton("Not Now") { dialog, _ ->
-                       dialog.cancel()
-                       findNavController().navigateUp()
-                       requireActivity().finishAffinity()
-                   }
-
-                   .create()
-                   .show()
+               showAlertDialog()
             }
         }
+    }
+
+    private fun showAlertDialog() {
+        AlertDialog.Builder(requireActivity())
+            .setTitle("PAY")
+            .setMessage("Are you sure you want to pay ?")
+            .setPositiveButton("Yes") { _, _ ->
+                findNavController().navigate(R.id.action_addToCartFragment_to_paymentFragment)
+            }
+            .setNegativeButton("Not Now") { dialog, _ ->
+                dialog.cancel()
+                findNavController().navigateUp()
+                requireActivity().finishAffinity()
+            }
+
+            .create()
+            .show()
     }
 
     private fun startShopping() {
