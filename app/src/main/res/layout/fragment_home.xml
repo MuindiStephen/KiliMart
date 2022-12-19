@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="68dp"
-        app:shimmer_duration="800">
+        app:shimmer_duration="3000">
 
         <GridLayout
             android:layout_width="match_parent"
