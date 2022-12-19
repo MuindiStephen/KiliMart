@@ -47,7 +47,9 @@ class HomeFragment : Fragment() {
         //binding.searchView2.setBackgroundResource(R.drawable.background_search)
 
         val root = binding.root
+
         return root
+
 
     }
 
@@ -58,7 +60,11 @@ class HomeFragment : Fragment() {
 
         searchFilterFunctionality()
 
+
+
     }
+
+
 
 
 
@@ -102,13 +108,17 @@ class HomeFragment : Fragment() {
 
                 is ApiStates.Loading -> {
                     binding.apply {
-                        progressBar.isVisible = true
+                        //progressBar.isVisible = true
+                        binding.shimmerLayout.startShimmer()
                     }
                 }
 
                 is ApiStates.Success -> {
                     binding.apply {
-                        progressBar.isVisible = false
+                       // progressBar.isVisible = false
+                        binding.shimmerLayout.stopShimmer()
+                        binding.shimmerLayout.visibility = View.GONE
+                        binding.recyclerView.visibility = View.VISIBLE
                     }
                 }
                 //else -> {}
@@ -119,6 +129,16 @@ class HomeFragment : Fragment() {
         }
 
 
+    }
+
+    override fun onResume() {
+        binding.shimmerLayout.startShimmer()
+        super.onResume()
+    }
+
+    override fun onPause() {
+        binding.shimmerLayout.stopShimmer()
+        super.onPause()
     }
 
 
