@@ -58,7 +58,7 @@ class HomeFragment : Fragment() {
 
         subscribeToProductsObserver()
 
-        searchFilterFunctionality()
+       // searchFilterFunctionality()
 
 
 
@@ -119,7 +119,7 @@ class HomeFragment : Fragment() {
                         binding.shimmerLayout.startShimmer()
                         binding.shimmerLayout.stopShimmer()
                         binding.shimmerLayout.visibility = View.GONE
-                       binding.recyclerView.visibility = View.VISIBLE
+                        binding.recyclerView.visibility = View.VISIBLE
                     }
                 }
                 //else -> {}

@@ -5,6 +5,8 @@
 package com.steve_md.joomia.ui.fragments.home
 
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -93,14 +95,34 @@ class AddToCartFragment : Fragment() {
             binding.textViewNoCartItem.isVisible = true
             binding.buttonStartShopping.isVisible = true
             binding.buttonCheckout.isEnabled = false
+
+            startShopping()
         } else {
             binding.cartLineItemsRecyclerView.adapter = cartAdapter
             binding.buttonCheckout.setOnClickListener {
-                findNavController().navigate(R.id.action_addToCartFragment_to_paymentFragment)
+               AlertDialog.Builder(requireActivity())
+                   .setTitle("PAY")
+                   .setMessage("Are you sure you want to pay ?")
+                   .setPositiveButton("Yes") { _, _ ->
+                       findNavController().navigate(R.id.action_addToCartFragment_to_paymentFragment)
+                   }
+                   .setNegativeButton("Not Now") { dialog, _ ->
+                       dialog.cancel()
+                       findNavController().navigateUp()
+                       requireActivity().finishAffinity()
+                   }
+
+                   .create()
+                   .show()
             }
         }
     }
 
+    private fun startShopping() {
+        binding.buttonStartShopping.setOnClickListener {
+            findNavController().navigateUp()
+        }
+    }
 
 
 }
