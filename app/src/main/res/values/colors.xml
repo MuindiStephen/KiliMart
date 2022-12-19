@@ -7,4 +7,6 @@
     <color name="yellow">#eb8909</color>
     <color name="green">#006600</color>
     <color name="less_green">#90EE90</color>
+    <color name="yellow_red">#e47200</color>
+    <color name="background">#dddddd</color>
 </resources>

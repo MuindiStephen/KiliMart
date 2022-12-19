@@ -50,7 +50,7 @@
             android:layout_marginTop="8dp"
             android:fontFamily="@font/nunito_sans_semibold"
             android:text="$10.00"
-            android:textColor="@color/green"
+            android:textColor="@color/yellow_red"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/productTitle"
             app:layout_constraintTop_toBottomOf="@+id/productTitle" />

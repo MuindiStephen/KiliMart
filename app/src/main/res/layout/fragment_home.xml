@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/less_green"
+    android:background="@color/white"
     tools:context=".ui.fragments.home.HomeFragment">
 
 
@@ -12,7 +12,7 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="68dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +28,7 @@
         android:layout_width="0dp"
         android:layout_height="67dp"
         android:visibility="visible"
-        android:indeterminateTint="@color/less_green"
+        android:indeterminateTint="@color/yellow_red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -42,8 +42,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:visibility="visible"
+        app:searchHintIcon="@color/white"
         android:background="@drawable/background_search"
-        android:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
