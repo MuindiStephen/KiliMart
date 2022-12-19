@@ -11,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.View.OnClickListener
 import android.view.ViewGroup
+import android.widget.SearchView
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -55,17 +56,27 @@ class HomeFragment : Fragment() {
 
         subscribeToProductsObserver()
 
-        buttonSearchFilterFunctionality(requireActivity().toString())
+        searchFilterFunctionality()
+
     }
 
 
 
-//TODO setOnSearchActionListener(object : OnSearchActionListener with searchBar + dependency
-    private fun buttonSearchFilterFunctionality(text:String) {
-        binding.searchView2.setOnSearchClickListener{
-            subscribeToProductsObserver()
-             searchFilterProducts(text)
-        }
+
+    private fun searchFilterFunctionality() {
+        binding.searchView2.setOnQueryTextListener(object :SearchView.OnQueryTextListener,
+            androidx.appcompat.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                searchFilterProducts(query = toString())
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                searchFilterProducts(query = toString())
+                return true
+            }
+
+        })
     }
 
     private fun searchFilterProducts(query: String) {

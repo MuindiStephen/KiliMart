@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/green"
-
+    android:background="@color/less_green"
     tools:context=".ui.fragments.home.HomeFragment">
 
 
@@ -29,7 +28,7 @@
         android:layout_width="0dp"
         android:layout_height="67dp"
         android:visibility="visible"
-        android:indeterminateTint="@color/green"
+        android:indeterminateTint="@color/less_green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
