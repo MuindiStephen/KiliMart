@@ -116,9 +116,10 @@ class HomeFragment : Fragment() {
                 is ApiStates.Success -> {
                     binding.apply {
                        // progressBar.isVisible = false
+                        binding.shimmerLayout.startShimmer()
                         binding.shimmerLayout.stopShimmer()
                         binding.shimmerLayout.visibility = View.GONE
-                        binding.recyclerView.visibility = View.VISIBLE
+                       binding.recyclerView.visibility = View.VISIBLE
                     }
                 }
                 //else -> {}
