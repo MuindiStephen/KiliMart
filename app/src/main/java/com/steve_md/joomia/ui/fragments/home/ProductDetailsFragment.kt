@@ -1,9 +1,5 @@
 /*
- * Copyright (c) 2022. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- * Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
- * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
- * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
- * Vestibulum commodo. Ut rhoncus gravida arcu.
+ * Copyright (c) 2022. Stephen Muindi
  */
 
 package com.steve_md.joomia.ui.fragments.home
@@ -68,8 +64,9 @@ class ProductDetailsFragment : Fragment() {
             viewModel.insertItemToCartLine(productsItem)
 
             val cartBadge:TextView? = view?.findViewById(R.id.cartBadge)
-            val cartBadgeValue:Int? = cartBadge?.id
-            cartBadgeValue!!+1
+            val cartBadgeValue = 0
+            cartBadge?.id = cartBadgeValue
+            cartBadge?.text = (cartBadgeValue +1).toString()
 
 
 
