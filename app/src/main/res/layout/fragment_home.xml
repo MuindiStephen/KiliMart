@@ -96,7 +96,7 @@
         app:searchHintIcon="@color/white" />
 
     <ImageView
-        android:id="@+id/cartItemsImageView"
+        android:id="@+id/cartIconImageView"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="0dp"
@@ -107,14 +107,18 @@
         app:layout_constraintTop_toTopOf="@+id/searchView2" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/cartBadge"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="24dp"
-        android:text="icon"
+        android:gravity="center"
+        android:textSize="11sp"
+        android:layout_alignParentEnd="true"
+        android:textColorHint="@color/white"
+        android:background="@drawable/cart_badge"
         android:textColor="@color/yellow_red"
-        app:layout_constraintStart_toStartOf="@+id/cartItemsImageView"
-        app:layout_constraintTop_toTopOf="@+id/cartItemsImageView" />
+        app:layout_constraintStart_toStartOf="@+id/cartIconImageView"
+        app:layout_constraintTop_toTopOf="@+id/cartIconImageView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
