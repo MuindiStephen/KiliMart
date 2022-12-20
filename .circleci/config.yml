@@ -24,3 +24,5 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+orbs:
+  docker: circleci/docker@1.7.0
