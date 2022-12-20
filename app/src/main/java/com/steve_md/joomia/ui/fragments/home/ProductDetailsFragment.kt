@@ -66,6 +66,13 @@ class ProductDetailsFragment : Fragment() {
 
         binding.buttonAddToCart.setOnClickListener {
             viewModel.insertItemToCartLine(productsItem)
+
+            val cartBadge:TextView? = view?.findViewById(R.id.cartBadge)
+            val cartBadgeValue:Int? = cartBadge?.id
+            cartBadgeValue!!+1
+
+
+
             itemAddedToCart()
             navigateToCheckout()
             increaseCounterItemIcon()
@@ -91,7 +98,7 @@ class ProductDetailsFragment : Fragment() {
 
         if (sharedIdValue == 0) {
             cartBadge?.isVisible = false
-        } else if (sharedIdValue == 1) {
+        } else if (sharedIdValue >= 1) {
             cartBadge?.isVisible  = true
         }
     }
