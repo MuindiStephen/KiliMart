@@ -9,18 +9,23 @@
 package com.steve_md.joomia.ui.fragments.home
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.steve_md.joomia.R
 import com.steve_md.joomia.databinding.FragmentProductDetailsBinding
+import com.steve_md.joomia.util.CartCounter
 import com.steve_md.joomia.viewmodel.CartViewModel
 import com.steve_md.joomia.viewmodel.ProductsViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -31,6 +36,8 @@ class ProductDetailsFragment : Fragment() {
 
     private lateinit var binding: FragmentProductDetailsBinding
     private val viewModel by viewModels<CartViewModel>()
+    private lateinit var sharedPreferences: SharedPreferences
+    private var sharedIdValue : Int  = 0
 
 
     private val args:ProductDetailsFragmentArgs by navArgs()
@@ -60,11 +67,25 @@ class ProductDetailsFragment : Fragment() {
             viewModel.insertItemToCartLine(productsItem)
             itemAddedToCart()
             navigateToCheckout()
+            increaseCounterItemIcon()
         }
 
 
         val root = binding.root
         return root
+    }
+
+    private fun increaseCounterItemIcon() {
+        sharedPreferences = requireActivity().getSharedPreferences("Cart Counter Shared Preferences", Context.MODE_PRIVATE)
+        sharedIdValue = sharedPreferences.getInt(CartCounter.counter.toString(), 0)
+
+        if (sharedIdValue == 0) {
+            val cartBadge:TextView? = view?.findViewById(R.id.cartBadge)
+            cartBadge?.isVisible = false
+        } else if (sharedIdValue == 1) {
+            val cartBadge:TextView? = view?.findViewById(R.id.cartBadge)
+            cartBadge?.isVisible  = true
+        }
     }
 
     private fun navigateToCheckout() {
