@@ -5,3 +5,7 @@
 
 package com.steve_md.joomia.util
 
+object CartCounter {
+    var counter : Int = 0
+}
+

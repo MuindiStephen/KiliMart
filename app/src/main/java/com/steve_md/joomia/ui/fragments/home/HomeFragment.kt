@@ -5,8 +5,11 @@
 package com.steve_md.joomia.ui.fragments.home
 
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
+import android.view.Display.Mode
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.OnClickListener
@@ -21,6 +24,8 @@ import com.steve_md.joomia.R
 import com.steve_md.joomia.adapters.ProductsItemAdapter
 import com.steve_md.joomia.databinding.FragmentHomeBinding
 import com.steve_md.joomia.util.ApiStates
+import com.steve_md.joomia.util.CartCounter
+import com.steve_md.joomia.util.CartCounter.counter
 import com.steve_md.joomia.util.toast
 import com.steve_md.joomia.viewmodel.ProductsViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -35,6 +40,10 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private val productsViewModel by viewModels<ProductsViewModel>()
     private val productsItemAdapter by lazy { ProductsItemAdapter() }
+
+    // Shared Preferences
+    private lateinit var sharedPreferences: SharedPreferences
+    private var sharedIdValue : Int  = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -63,6 +72,21 @@ class HomeFragment : Fragment() {
 
         cartIconNavigateToAddToCartFragment()
 
+
+        checkCartCounterCartLineItemsQuantity()
+
+    }
+
+    private fun checkCartCounterCartLineItemsQuantity() {
+        sharedPreferences = requireActivity().getSharedPreferences("Cart Counter Shared Preferences", Context.MODE_PRIVATE)
+        sharedIdValue = sharedPreferences.getInt(counter.toString(), 0)
+
+        if (sharedIdValue == 0) {
+            binding.cartBadge.isVisible = false
+        } else if (sharedIdValue == 1) {
+            binding.cartBadge.text = sharedIdValue.toString()
+            binding.cartBadge.isVisible  = true
+        }
     }
 
     private fun cartIconNavigateToAddToCartFragment() {
@@ -103,7 +127,6 @@ class HomeFragment : Fragment() {
             when(it){
                 is ApiStates.Error -> {
                     it.error?.localizedMessage?.toString().let { it1 -> toast(it1!!) }
-                    //toast(it.error?.localizedMessage.toString())
                     binding.apply {
                         progressBar.isVisible = false
                     }
@@ -111,7 +134,6 @@ class HomeFragment : Fragment() {
 
                 is ApiStates.Loading -> {
                     binding.apply {
-                        //progressBar.isVisible = true
                         binding.shimmerLayout.startShimmer()
                     }
                 }

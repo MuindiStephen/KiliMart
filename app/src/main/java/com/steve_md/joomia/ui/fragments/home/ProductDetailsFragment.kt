@@ -24,6 +24,7 @@ import com.steve_md.joomia.databinding.FragmentProductDetailsBinding
 import com.steve_md.joomia.viewmodel.CartViewModel
 import com.steve_md.joomia.viewmodel.ProductsViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Job
 
 @AndroidEntryPoint
 class ProductDetailsFragment : Fragment() {
