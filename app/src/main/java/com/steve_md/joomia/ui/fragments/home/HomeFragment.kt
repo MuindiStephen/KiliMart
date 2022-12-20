@@ -15,6 +15,7 @@ import android.widget.SearchView
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.room.Query
 import com.steve_md.joomia.R
 import com.steve_md.joomia.adapters.ProductsItemAdapter
@@ -60,13 +61,15 @@ class HomeFragment : Fragment() {
 
        // searchFilterFunctionality()
 
-
+        cartIconNavigateToAddToCartFragment()
 
     }
 
-
-
-
+    private fun cartIconNavigateToAddToCartFragment() {
+        binding.cartIconImageView.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_addToCartFragment)
+        }
+    }
 
 
     private fun searchFilterFunctionality() {

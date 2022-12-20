@@ -25,6 +25,9 @@
             android:id="@+id/action_homeFragment_to_productDetailsFragment"
             app:destination="@id/productDetailsFragment"
             app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_homeFragment_to_addToCartFragment"
+            app:destination="@id/addToCartFragment" />
 
     </fragment>
     <fragment
