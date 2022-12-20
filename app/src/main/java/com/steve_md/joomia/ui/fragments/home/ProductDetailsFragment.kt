@@ -90,10 +90,8 @@ class ProductDetailsFragment : Fragment() {
         cartBadge?.isVisible = true
 
         if (sharedIdValue == 0) {
-            val cartBadge:TextView? = view?.findViewById(R.id.cartBadge)
             cartBadge?.isVisible = false
         } else if (sharedIdValue == 1) {
-            val cartBadge:TextView? = view?.findViewById(R.id.cartBadge)
             cartBadge?.isVisible  = true
         }
     }
