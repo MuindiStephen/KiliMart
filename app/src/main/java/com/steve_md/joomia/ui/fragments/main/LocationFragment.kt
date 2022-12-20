@@ -9,31 +9,24 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.SupportMapFragment
-import com.steve_md.joomia.databinding.FragmentDeliveryAddressBinding
+import com.steve_md.joomia.R
+import com.steve_md.joomia.databinding.FragmentLocationBinding
 
-class DeliveryAddressFragment : Fragment() {
+class LocationFragment : Fragment() {
 
-    private lateinit var binding:FragmentDeliveryAddressBinding
-    private lateinit var googleMap: GoogleMap
-    private lateinit var maps:SupportMapFragment
+    private lateinit var binding:FragmentLocationBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        binding = FragmentDeliveryAddressBinding.inflate(inflater, container, false)
-        val root = binding.root
-        return root
+         binding = FragmentLocationBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    // include a map here
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
     }
 
 }
