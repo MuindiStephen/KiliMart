@@ -28,6 +28,10 @@ Consuming [FAKE STORE API](https://fakestoreapi.com/) to demonstrate online shop
 - Shared Preferences
 
 
+## Testing qnd Deployment
+- Circle CI & Docker
+
+
 
 ```Copyright 2022 Muindi Stephen 
 
