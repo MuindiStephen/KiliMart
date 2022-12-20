@@ -13,29 +13,38 @@
         android:id="@+id/shimmerLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_gravity="center"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="68dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="68dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:columnCount="2">
+            android:columnCount="2"
+            android:orientation="horizontal">
 
             <!--Adding several shimmer placeholder layouts-->
             <include layout="@layout/data_placeholder_layout" />
+
             <include layout="@layout/data_placeholder_layout" />
+
             <include layout="@layout/data_placeholder_layout" />
+
             <include layout="@layout/data_placeholder_layout" />
+
             <include layout="@layout/data_placeholder_layout" />
+
             <include layout="@layout/data_placeholder_layout" />
+
             <include layout="@layout/data_placeholder_layout" />
+
             <include layout="@layout/data_placeholder_layout" />
+
             <include layout="@layout/data_placeholder_layout" />
+
             <include layout="@layout/data_placeholder_layout" />
 
         </GridLayout>
@@ -71,17 +80,41 @@
         app:layout_constraintTop_toBottomOf="@id/searchView2"/>
 
     <androidx.appcompat.widget.SearchView
-        style="@style/Widget.AppCompat.SearchView"
         android:id="@+id/searchView2"
+        style="@style/Widget.AppCompat.SearchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:visibility="visible"
-        app:searchHintIcon="@color/white"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="68dp"
         android:background="@drawable/background_search"
+        android:backgroundTint="@color/background"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:searchHintIcon="@color/white" />
+
+    <ImageView
+        android:id="@+id/cartItemsImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="0dp"
+        android:src="@drawable/ic_baseline_add_shopping_cart_24"
+        app:layout_constraintBottom_toBottomOf="@+id/searchView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/searchView2"
+        app:layout_constraintTop_toTopOf="@+id/searchView2" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:text="icon"
+        android:textColor="@color/yellow_red"
+        app:layout_constraintStart_toStartOf="@+id/cartItemsImageView"
+        app:layout_constraintTop_toTopOf="@+id/cartItemsImageView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

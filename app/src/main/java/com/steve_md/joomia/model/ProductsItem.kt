@@ -1,6 +1,8 @@
 package com.steve_md.joomia.model
 
 
+// ProductsItem DTO
+
 import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
