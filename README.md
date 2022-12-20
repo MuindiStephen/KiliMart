@@ -26,6 +26,7 @@ Consuming [FAKE STORE API](https://fakestoreapi.com/) to demonstrate online shop
         * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - store and manage UI-related data in a lifecycle conscious way.
 - Shimmer Effect
 - Lottie Animations
+- Shared Preferences
 
 
 
