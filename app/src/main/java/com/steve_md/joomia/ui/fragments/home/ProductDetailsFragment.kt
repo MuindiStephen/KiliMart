@@ -26,6 +26,7 @@ import com.bumptech.glide.Glide
 import com.steve_md.joomia.R
 import com.steve_md.joomia.databinding.FragmentProductDetailsBinding
 import com.steve_md.joomia.util.CartCounter
+import com.steve_md.joomia.util.CartCounter.counter
 import com.steve_md.joomia.viewmodel.CartViewModel
 import com.steve_md.joomia.viewmodel.ProductsViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -78,6 +79,15 @@ class ProductDetailsFragment : Fragment() {
     private fun increaseCounterItemIcon() {
         sharedPreferences = requireActivity().getSharedPreferences("Cart Counter Shared Preferences", Context.MODE_PRIVATE)
         sharedIdValue = sharedPreferences.getInt(CartCounter.counter.toString(), 0)
+
+        sharedPreferences.edit()
+            .putInt(counter.toString(),sharedPreferences.getInt(counter.toString(),0)+1)
+            .apply()
+
+        val sharedIdValue = sharedPreferences.getInt(counter.toString(),0)
+        val cartBadge:TextView? = view?.findViewById(R.id.cartBadge)
+        cartBadge?.text = sharedIdValue.toString()
+        cartBadge?.isVisible = true
 
         if (sharedIdValue == 0) {
             val cartBadge:TextView? = view?.findViewById(R.id.cartBadge)
