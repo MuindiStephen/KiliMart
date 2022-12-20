@@ -26,3 +26,36 @@ workflows:
       - say-hello
 orbs:
   docker: circleci/docker@1.7.0
+
+  workflows:
+    test-and-build:
+      jobs:
+        - unit-test
+        - android-test: # Commits to any branch - skip matrix of devices
+            filters:
+              branches:
+                ignore: master
+        - android-test: # Commits to master branch only - run full matrix
+            matrix:
+              alias: android-test-all
+              parameters:
+                system-image:
+                  - system-images;android-30;google_apis;x86
+                  - system-images;android-29;google_apis;x86
+                  - system-images;android-28;google_apis;x86
+                  - system-images;android-27;google_apis;x86
+                  - system-images;android-26;google_apis;x86
+                  - system-images;android-25;google_apis;x86
+                  - system-images;android-24;google_apis;x86
+                  - system-images;android-23;google_apis;x86
+            name: android-test-<<matrix.system-image>>
+            filters:
+              branches:
+                only: master
+        - release-build:
+            requires:
+              - unit-test
+              - android-test-all
+            filters:
+              branches:
+                only: master # Commits to master branch
