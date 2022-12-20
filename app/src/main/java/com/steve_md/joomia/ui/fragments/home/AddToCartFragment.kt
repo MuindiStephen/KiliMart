@@ -108,10 +108,10 @@ class AddToCartFragment : Fragment() {
 
     private fun showAlertDialog() {
         AlertDialog.Builder(requireActivity())
-            .setTitle("PAY")
-            .setMessage("Are you sure you want to pay ?")
+            .setTitle("ORDER")
+            .setMessage("Are you sure you want to order ?")
             .setPositiveButton("Yes") { _, _ ->
-                findNavController().navigate(R.id.action_addToCartFragment_to_paymentFragment)
+                findNavController().navigate(R.id.action_addToCartFragment_to_deliveryAddressFragment)
             }
             .setNegativeButton("Not Now") { dialog, _ ->
                 dialog.cancel()

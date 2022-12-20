@@ -51,15 +51,24 @@
         android:label="fragment_add_to_cart"
         tools:layout="@layout/fragment_add_to_cart" >
         <action
-            android:id="@+id/action_addToCartFragment_to_paymentFragment"
-            app:destination="@id/paymentFragment" />
-        <action
             android:id="@+id/action_addToCartFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_addToCartFragment_to_deliveryAddressFragment"
+            app:destination="@id/deliveryAddressFragment" />
     </fragment>
     <fragment
         android:id="@+id/paymentFragment"
         android:name="com.steve_md.joomia.ui.fragments.home.PaymentFragment"
         android:label="fragment_payment"
         tools:layout="@layout/fragment_payment" />
+    <fragment
+        android:id="@+id/deliveryAddressFragment"
+        android:name="com.steve_md.joomia.ui.fragments.main.DeliveryAddressFragment"
+        android:label="fragment_delivery_address"
+        tools:layout="@layout/fragment_delivery_address" >
+        <action
+            android:id="@+id/action_deliveryAddressFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
 </navigation>
