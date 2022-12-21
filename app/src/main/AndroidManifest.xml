@@ -25,6 +25,9 @@
         android:theme="@style/Theme.Joomia"
         tools:targetApi="31">
 
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAmjw_S5Bhy_Fq6qkepiXmoRLCYFrd6XUc"/>
+
         <activity
             android:name=".ui.activities.MainActivity"
             android:exported="true">
