@@ -71,7 +71,7 @@ class DeliveryAddressFragment : Fragment() {
         maps.getMapAsync(OnMapReadyCallback {
             googleMap = it
 
-            val location = LatLng(-1.2858265315883002, 36.812839014991155)
+            val location = LatLng(-1.2324779, 36.8765912)
             googleMap.addMarker(MarkerOptions().position(location).title("Nairobi, Kenya"))
             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location, 10f))
         })
