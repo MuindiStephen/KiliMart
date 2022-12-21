@@ -16,6 +16,7 @@
     <application
         android:name=".HiltApp"
         android:allowBackup="true"
+        android:usesCleartextTraffic="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_app_logo"
@@ -26,7 +27,7 @@
         tools:targetApi="31">
 
         <meta-data android:name="com.google.android.geo.API_KEY"
-            android:value="PUT_YOUR_SECRET_API_KEY"/>
+            android:value="AIzaSyAmjw_S5Bhy_Fq6qkepiXmoRLCYFrd6XUc"/>
 
         <activity
             android:name=".ui.activities.MainActivity"

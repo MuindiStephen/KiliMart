@@ -129,6 +129,7 @@ class HomeFragment : Fragment() {
                     it.error?.localizedMessage?.toString().let { it1 -> toast(it1!!) }
                     binding.apply {
                         progressBar.isVisible = false
+                        Timber.i("An error occurred, please try again!")
                     }
                 }
 

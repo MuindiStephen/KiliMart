@@ -1,5 +1,6 @@
 package com.steve_md.joomia.ui.fragments.splash
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.os.Handler
 import androidx.fragment.app.Fragment
@@ -15,6 +16,7 @@ import com.steve_md.joomia.databinding.FragmentSplashScreenBinding
 import com.steve_md.joomia.util.ApiStates
 import com.steve_md.joomia.viewmodel.SplashViewModel
 
+@SuppressLint("CustomSplashScreen")
 class SplashScreenFragment : Fragment() {
 
     // binding
@@ -24,7 +26,7 @@ class SplashScreenFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
 
        binding = FragmentSplashScreenBinding.inflate(inflater, container, false)
