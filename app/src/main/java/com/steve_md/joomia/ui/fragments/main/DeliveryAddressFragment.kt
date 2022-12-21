@@ -83,7 +83,7 @@ class DeliveryAddressFragment : Fragment() {
         if (permission != PackageManager.PERMISSION_GRANTED) {
             makeRequest()
         }else{
-            setUpMaps()
+           // setUpMaps()
         }
     }
 
