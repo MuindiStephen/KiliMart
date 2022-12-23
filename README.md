@@ -1,6 +1,7 @@
 # KiliMart
 Consuming [FAKE STORE API](https://fakestoreapi.com/) to demonstrate online shop store.Built this app using the MVVM architecture, Kotlin Flows, (Uni-directional data flow), dagger hilt, viewmodel, Room  and Kotlin coroutines.
 
+## NB: Still in Progress 🚧 🛠️🛠️🛠️
 ## App General preview
  - Updated demos coming soon
 
