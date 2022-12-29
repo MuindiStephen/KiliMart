@@ -29,7 +29,7 @@ Consuming [FAKE STORE API](https://fakestoreapi.com/) to demonstrate online shop
 - Shared Preferences
 
 
-## Testing qnd Deployment
+## Testing And Deployment
 - Circle CI & Docker
 
 
