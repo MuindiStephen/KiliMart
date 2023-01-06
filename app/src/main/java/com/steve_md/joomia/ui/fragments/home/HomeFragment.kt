@@ -4,35 +4,28 @@
 
 package com.steve_md.joomia.ui.fragments.home
 
-
 import android.content.Context
 import android.content.SharedPreferences
-import android.graphics.Color
 import android.os.Bundle
-import android.view.Display.Mode
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.OnClickListener
 import android.view.ViewGroup
-import android.widget.SearchView
+import android.view.inputmethod.EditorInfo
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import androidx.room.Query
 import com.steve_md.joomia.R
 import com.steve_md.joomia.adapters.ProductsItemAdapter
 import com.steve_md.joomia.databinding.FragmentHomeBinding
-import com.steve_md.joomia.util.ApiStates
-import com.steve_md.joomia.util.CartCounter
 import com.steve_md.joomia.util.CartCounter.counter
+import com.steve_md.joomia.util.hideKeyboard
 import com.steve_md.joomia.util.toast
 import com.steve_md.joomia.viewmodel.ProductsViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.flow.observeOn
+import kotlinx.coroutines.launch
 import timber.log.Timber
-
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
@@ -43,49 +36,69 @@ class HomeFragment : Fragment() {
 
     // Shared Preferences
     private lateinit var sharedPreferences: SharedPreferences
-    private var sharedIdValue : Int  = 0
+    private var sharedIdValue: Int = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        binding.searchView2.setBackgroundColor(Color.WHITE)
-        //binding.searchView2.setBackgroundResource(R.drawable.background_search)
+        // Search
+        binding.searchProduct.setOnEditorActionListener { v, actionId, event ->
+            if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                // Hide keyboard
+                hideKeyboard()
 
-        val root = binding.root
+                val searchText = binding.searchView.editText?.text.toString().trim()
 
-        return root
+                if (searchText.isEmpty()) {
+                    toast(message = "Please input some text in order to search")
+                    false
+                }
+                productsViewModel.getProducts(searchQuery = searchText)
+                true
+            } else {
+                false
+            }
+        }
 
+        binding.searchView.setEndIconOnClickListener {
+            hideKeyboard()
 
+            if (binding.searchView.editText?.text.isNullOrEmpty()) {
+                return@setEndIconOnClickListener
+            }
+
+            binding.searchView.editText?.setText("")
+            productsViewModel.getProducts()
+        }
+
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         subscribeToProductsObserver()
-
-       // searchFilterFunctionality()
-
         cartIconNavigateToAddToCartFragment()
-
-
         checkCartCounterCartLineItemsQuantity()
-
     }
 
     private fun checkCartCounterCartLineItemsQuantity() {
-        sharedPreferences = requireActivity().getSharedPreferences("Cart Counter Shared Preferences", Context.MODE_PRIVATE)
+        sharedPreferences =
+            requireActivity().getSharedPreferences(
+                "Cart Counter Shared Preferences",
+                Context.MODE_PRIVATE
+            )
         sharedIdValue = sharedPreferences.getInt(counter.toString(), 0)
 
         if (sharedIdValue == 0) {
             binding.cartBadge.isVisible = false
         } else if (sharedIdValue == 1) {
             binding.cartBadge.text = sharedIdValue.toString()
-            binding.cartBadge.isVisible  = true
+            binding.cartBadge.isVisible = true
         }
     }
 
@@ -95,67 +108,54 @@ class HomeFragment : Fragment() {
         }
     }
 
-
-    private fun searchFilterFunctionality() {
-        binding.searchView2.setOnQueryTextListener(object :SearchView.OnQueryTextListener,
-            androidx.appcompat.widget.SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                searchFilterProducts(query = toString())
-                return true
-            }
-
-            override fun onQueryTextChange(newText: String?): Boolean {
-                searchFilterProducts(query = toString())
-                return true
-            }
-
-        })
-    }
-
-    private fun searchFilterProducts(query: String) {
-        // Custom Sql Query When Searching Products By Filtering Them
-        val searchQuery = "%$query%"
-        productsViewModel.searchProductsFromLocalDatabase(searchQuery).observe(viewLifecycleOwner) { list ->
-            list.let {
-                productsItemAdapter.submitList(it)
-            }
-        }
-    }
-
     private fun subscribeToProductsObserver() {
-        productsViewModel.products.observe(viewLifecycleOwner) {
-            when(it){
-                is ApiStates.Error -> {
-                    it.error?.localizedMessage?.toString().let { it1 -> toast(it1!!) }
-                    binding.apply {
-                        progressBar.isVisible = false
-                        Timber.i("An error occurred, please try again!")
-                    }
+        lifecycleScope.launch {
+            productsViewModel.products.collect { productState ->
+                Timber.e("State state: $productState")
+
+                // Loading state
+                if (productState.isLoading) {
+                    binding.shimmerLayout.visibility = View.VISIBLE
+                    binding.recyclerView.visibility = View.GONE
+                    binding.shimmerLayout.startShimmer()
+                    binding.errorOrEmptyStateTextView.visibility = View.GONE
                 }
 
-                is ApiStates.Loading -> {
-                    binding.apply {
-                        binding.shimmerLayout.startShimmer()
-                    }
+                // There is an error
+                if (productState.error != null && !productState.isLoading) {
+                    toast(message = productState.error)
+                    binding.shimmerLayout.stopShimmer()
+                    binding.errorOrEmptyStateTextView.visibility = View.VISIBLE
+                    binding.errorOrEmptyStateTextView.text = productState.error
                 }
 
-                is ApiStates.Success -> {
+                // Products have been loaded
+                if (productState.products.isNotEmpty() && !productState.isLoading) {
                     binding.apply {
-                       // progressBar.isVisible = false
-                        binding.shimmerLayout.startShimmer()
                         binding.shimmerLayout.stopShimmer()
                         binding.shimmerLayout.visibility = View.GONE
                         binding.recyclerView.visibility = View.VISIBLE
+                        binding.errorOrEmptyStateTextView.visibility = View.GONE
                     }
+
+                    productsItemAdapter.submitList(productState.products)
+                    binding.recyclerView.adapter = productsItemAdapter
+                    Timber.i("Data Fetched successfully: ${productState.products}")
                 }
-                //else -> {}
+
+                // No products found
+                if (productState.products.isEmpty() && !productState.isLoading) {
+                    binding.apply {
+                        binding.shimmerLayout.stopShimmer()
+                        binding.shimmerLayout.visibility = View.GONE
+                        binding.recyclerView.visibility = View.GONE
+                    }
+
+                    binding.errorOrEmptyStateTextView.visibility = View.VISIBLE
+                    binding.errorOrEmptyStateTextView.text = "Nothing found"
+                }
             }
-            productsItemAdapter.submitList(it.data)
-            binding.recyclerView.adapter = productsItemAdapter
-            Timber.i("Data Fetched successfully")
         }
-
-
     }
 
     override fun onResume() {
@@ -167,8 +167,4 @@ class HomeFragment : Fragment() {
         binding.shimmerLayout.stopShimmer()
         super.onPause()
     }
-
-
-
 }
-

@@ -1,57 +1,77 @@
 package com.steve_md.joomia.viewmodel
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.asLiveData
+import androidx.lifecycle.viewModelScope
 import com.steve_md.joomia.data.repository.ProductsRepository
 import com.steve_md.joomia.model.ProductsItem
+import com.steve_md.joomia.util.ApiStates
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
-
 
 @HiltViewModel
 class ProductsViewModel @Inject constructor(
     private val productsRepository: ProductsRepository
 ) : ViewModel() {
 
-    val products = productsRepository.getAllProducts().asLiveData()
+    init {
+        getProducts()
+    }
 
-    fun searchProductsFromLocalDatabase(searchQuery: String) : LiveData<List<ProductsItem>> {
-        return productsRepository.searchDatabase(searchQuery).asLiveData()
+    private val _products = MutableSharedFlow<ProductsState>()
+    val products: SharedFlow<ProductsState> = _products
+
+    fun getProducts(searchQuery: String = "") {
+        viewModelScope.launch {
+            _products.emit(
+                ProductsState(
+                    isLoading = true,
+                    error = null,
+                    products = emptyList()
+                )
+            )
+
+            productsRepository.getAllProducts().collectLatest { result ->
+                when (result) {
+                    is ApiStates.Error -> {
+                        _products.emit(
+                            ProductsState(
+                                isLoading = false,
+                                error = result.error?.message ?: "Unknown Error Occurred"
+                            )
+                        )
+
+                        Timber.e("Get all products: ${result.error?.message ?: "Unknown Error Occurred"}")
+                    }
+                    is ApiStates.Success -> {
+                        _products.emit(
+                            ProductsState(
+                                isLoading = false,
+                                products = if (searchQuery != "") {
+                                    result.data!!.filter {
+                                        it.title.contains(searchQuery, ignoreCase = true)
+                                    }
+                                } else {
+                                    result.data ?: emptyList()
+                                }
+                            )
+                        )
+
+                        Timber.e("Get all products: ${result.data}")
+                    }
+                    else -> {}
+                }
+            }
+        }
     }
 }
 
-    /*
-     ProductsRepository(
-        apiService = retrofitApi,
-        productsDatabase = ProductsDatabase.productsDao()
-    )
-    */
-//
-    /*
-    private var _products = MutableStateFlow<ApiStates<List<ProductsItem>>?>(null)
-       var products: StateFlow<ApiStates<List<ProductsItem>>?> get() = _products
-
-    init {
-        getAllProducts()
-    }
-    */
-
-//    val products : Job = viewModelScope.launch{
-//        repository.getAllProducts().asLiveData()
-//    }
-
-
-
-    /* same as this
-    private fun getAllProducts()  = viewModelScope.launch {
-             repository.getAllProducts().asLiveData()
-             //also { _products?.value = it }
-         }
-   */
-
-
-
-
-
+data class ProductsState(
+    val isLoading: Boolean = false,
+    val error: String? = null,
+    val products: List<ProductsItem> = emptyList()
+)
