@@ -16,6 +16,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="68dp"
         android:orientation="vertical"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -53,16 +54,15 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView2"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
         app:spanCount="2"
         tools:listitem="@layout/product_list_item" />
 
@@ -71,54 +71,78 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="0dp"
         android:layout_height="67dp"
-        android:visibility="invisible"
         android:indeterminateTint="@color/yellow_red"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/searchView2"/>
+        app:layout_constraintTop_toBottomOf="@id/searchView" />
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/searchView2"
-        style="@style/Widget.AppCompat.SearchView"
-        android:layout_width="match_parent"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchView"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="68dp"
-        android:background="@drawable/background_search"
-        android:backgroundTint="@color/background"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/white"
+        app:endIconDrawable="@drawable/ic_baseline_close_24"
+        app:endIconMode="custom"
+        app:endIconTint="#aaaaaa"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toStartOf="@+id/cartIconImageView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:searchHintIcon="@color/white" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_background"
+            android:hint="@string/search_product"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:textColorHint="@color/background" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
         android:id="@+id/cartIconImageView"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginStart="0dp"
+        android:layout_marginEnd="8dp"
         android:src="@drawable/ic_baseline_add_shopping_cart_24"
-        app:layout_constraintBottom_toBottomOf="@+id/searchView2"
+        app:layout_constraintBottom_toBottomOf="@+id/searchView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/searchView2"
-        app:layout_constraintTop_toTopOf="@+id/searchView2" />
+        app:layout_constraintTop_toTopOf="@+id/searchView" />
 
     <TextView
         android:id="@+id/cartBadge"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginStart="24dp"
-        android:gravity="center"
-        android:textSize="16sp"
-        android:text="0"
-        android:background="@drawable/cart_badge"
         android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/cart_badge"
+        android:gravity="center"
+        android:text="0"
         android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/cartIconImageView"
         app:layout_constraintTop_toTopOf="@+id/cartIconImageView" />
+
+    <TextView
+        android:id="@+id/errorOrEmptyStateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
