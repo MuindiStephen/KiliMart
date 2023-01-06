@@ -6,11 +6,11 @@
         android:title="Products"
         android:icon="@drawable/ic_products"/>
     <item
-        android:id="@+id/addToCartFragmeny"
+        android:id="@+id/addToCartFragment"
         android:title="Cart"
         android:icon="@drawable/ic_shopping_cart"/>
     <item
-        android:id="@+id/payFragment"
+        android:id="@+id/paymentFragment"
         android:title="Pay"
         android:icon="@drawable/ic_payments"/>
 
