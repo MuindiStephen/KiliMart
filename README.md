@@ -6,7 +6,7 @@ Consuming [FAKE STORE API](https://fakestoreapi.com/) to demonstrate online shop
  - Updated demos coming soon
 
 
-## Tech Stach & Concepts
+## Tech Stack & Concepts
 - 
     * [Kotlin](https://kotlinlang.org/) - a cross-platform, statically typed, general-purpose programming language with type inference.
     * [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html) - perform background operations.
