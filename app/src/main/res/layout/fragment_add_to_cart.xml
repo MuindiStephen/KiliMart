@@ -28,8 +28,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:text="CHECKOUT ($250)"
+        android:layout_marginBottom="50dp"
         android:fontFamily="@font/nunito_sans_semibold"
+        android:text="CHECKOUT ($250)"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

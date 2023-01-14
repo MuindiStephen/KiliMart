@@ -125,7 +125,7 @@ class AddToCartFragment : Fragment() {
 
     private fun startShopping() {
         binding.buttonStartShopping.setOnClickListener {
-            findNavController().navigateUp()
+            findNavController().navigate(R.id.action_addToCartFragment_to_homeFragment)
         }
     }
 
