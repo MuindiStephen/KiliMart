@@ -27,6 +27,7 @@ Consuming [FAKE STORE API](https://fakestoreapi.com/) to demonstrate online shop
 - Shimmer Effect
 - Lottie Animations
 - Shared Preferences
+- Datastore 
 
 
 ## Testing And Deployment
