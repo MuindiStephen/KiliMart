@@ -35,7 +35,8 @@ Consuming [FAKE STORE API](https://fakestoreapi.com/) to demonstrate online shop
 
 
 
-```Copyright 2022 Muindi Stephen 
+```
+Copyright 2022 Muindi Stephen 
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
