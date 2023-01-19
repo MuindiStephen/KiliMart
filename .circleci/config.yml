@@ -25,3 +25,4 @@ jobs:
           command: ./gradlew app:test
       - store_test_results:
           path: app/build/test-results
+          
