@@ -4,7 +4,6 @@
 
 package com.steve_md.joomia.ui.fragments.home
 
-import android.app.Fragment
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -16,7 +15,6 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.internal.ViewUtils.hideKeyboard
 import com.steve_md.joomia.R
