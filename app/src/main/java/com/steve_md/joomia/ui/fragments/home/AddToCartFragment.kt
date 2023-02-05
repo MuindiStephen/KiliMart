@@ -6,25 +6,18 @@ package com.steve_md.joomia.ui.fragments.home
 
 
 import android.app.AlertDialog
-import android.content.DialogInterface
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.Toast
-import androidx.core.view.isEmpty
 import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.steve_md.joomia.R
 import com.steve_md.joomia.adapters.CartAdapter
-import com.steve_md.joomia.data.local.CartDao
-import com.steve_md.joomia.data.local.entity.CartEntity
 import com.steve_md.joomia.databinding.FragmentAddToCartBinding
-
 import com.steve_md.joomia.viewmodel.CartViewModel
 import dagger.hilt.android.AndroidEntryPoint
 

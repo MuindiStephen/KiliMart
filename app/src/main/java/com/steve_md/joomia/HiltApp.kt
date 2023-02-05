@@ -9,7 +9,6 @@ class HiltApp : Application() {
     // Timber logs
     override fun onCreate() {
         super.onCreate()
-
         Timber.plant(Timber.DebugTree())
     }
 }
