@@ -3,4 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="search_product">Search Product...</string>
+    <string name="cartimage">cartImage</string>
+    <string name="_0">0</string>
+    <string name="what_would_you_like_to_buy_today">What would you like to buy today?</string>
 </resources>

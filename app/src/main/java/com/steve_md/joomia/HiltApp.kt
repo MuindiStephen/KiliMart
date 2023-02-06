@@ -1,3 +1,7 @@
+/*
+ * Copyright (c)  Stephen Muindi
+ */
+
 package com.steve_md.joomia
 
 import android.app.Application

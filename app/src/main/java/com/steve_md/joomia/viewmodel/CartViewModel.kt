@@ -1,3 +1,7 @@
+/*
+ * Copyright (c)  Stephen Muindi
+ */
+
 package com.steve_md.joomia.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

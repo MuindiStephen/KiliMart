@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <!--~ Copyright (c) 2022. Stephen Muindi
-    -->
+    <!--
+  ~ Copyright (c)  Stephen Muindi
+  -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -56,13 +57,13 @@
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
         app:spanCount="2"
         tools:listitem="@layout/product_list_item" />
 
@@ -113,6 +114,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginEnd="8dp"
+        android:contentDescription="@string/cartimage"
         android:src="@drawable/ic_baseline_add_shopping_cart_24"
         app:layout_constraintBottom_toBottomOf="@+id/searchView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -126,7 +128,7 @@
         android:layout_marginStart="24dp"
         android:background="@drawable/cart_badge"
         android:gravity="center"
-        android:text="0"
+        android:text="@string/_0"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/cartIconImageView"
@@ -143,6 +145,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="22sp"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:text="@string/what_would_you_like_to_buy_today"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintStart_toStartOf="@+id/searchView"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

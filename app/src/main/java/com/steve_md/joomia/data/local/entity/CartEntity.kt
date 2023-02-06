@@ -1,3 +1,7 @@
+/*
+ * Copyright (c)  Stephen Muindi
+ */
+
 package com.steve_md.joomia.data.local.entity
 
 import androidx.room.Entity

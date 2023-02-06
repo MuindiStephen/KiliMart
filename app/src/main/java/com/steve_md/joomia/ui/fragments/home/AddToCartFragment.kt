@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022. Stephen Muindi
+ * Copyright (c)  Stephen Muindi
  */
 
 package com.steve_md.joomia.ui.fragments.home

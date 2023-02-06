@@ -1,3 +1,7 @@
+/*
+ * Copyright (c)  Stephen Muindi
+ */
+
 package com.steve_md.joomia.data.remote.api
 
 import com.steve_md.joomia.model.ProductsItem
