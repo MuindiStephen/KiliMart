@@ -9,15 +9,19 @@
     tools:context=".ui.fragments.splash.SplashScreenFragment">
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animationView"
+        android:id="@+id/splashScreenLottieAnimation"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="300dp"
         android:background="@color/yellow_red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+
+        android:layout_marginBottom="50dp"
         app:lottie_rawRes="@raw/animation" />
 
     <TextView
@@ -33,21 +37,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/animationView"
-        app:layout_constraintVertical_bias="0.065" />
+        app:layout_constraintTop_toBottomOf="@+id/splashScreenLottieAnimation"
+        app:layout_constraintVertical_bias="0.601" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:text="Developed by Stephen Muindi"
-        android:textSize="18sp"
-        android:textStyle="italic"
+        android:layout_marginTop="36dp"
         android:fontFamily="@font/nunito_sans_semibold"
+        android:text="Developed by Stephen Muindi"
         android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
