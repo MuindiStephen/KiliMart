@@ -104,7 +104,7 @@ class AddToCartFragment : Fragment() {
             .setTitle("ORDER")
             .setMessage("Are you sure you want to order ?")
             .setPositiveButton("Yes") { _, _ ->
-                findNavController().navigate(R.id.action_addToCartFragment_to_deliveryAddressFragment)
+                findNavController().navigate(R.id.action_addToCartFragment_to_paymentSuccessfulFragment)
             }
             .setNegativeButton("Not Now") { dialog, _ ->
                 dialog.cancel()

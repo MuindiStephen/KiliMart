@@ -1,11 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.main.PaymentSuccessfulFragment">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/paymentSuccessLottieAnimationView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        app:lottie_autoPlay="true" />
+
+    <TextView
+        android:id="@+id/tvPaymentSuccessful"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/paymentSuccessLottieAnimationView"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:textColor="@color/black"
+        android:layout_marginTop="48dp"
+        android:text="Payment Successful" />
+
+    <TextView
+        android:id="@+id/tvPaymentSuccessful2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPaymentSuccessful"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:text="You have successfully paid KES 6000 to Kilimart for Products. Your transaction ID is Q5JY89UI7XF"
+        android:gravity="center"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+
+    <Button
+        android:id="@+id/btnGoHome"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:text="Go Home"
+        android:textAllCaps="false"
+        android:textStyle="bold"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

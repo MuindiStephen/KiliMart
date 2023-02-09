@@ -56,6 +56,9 @@
         <action
             android:id="@+id/action_addToCartFragment_to_deliveryAddressFragment"
             app:destination="@id/deliveryAddressFragment" />
+        <action
+            android:id="@+id/action_addToCartFragment_to_paymentSuccessfulFragment"
+            app:destination="@id/paymentSuccessfulFragment" />
     </fragment>
     <fragment
         android:id="@+id/paymentFragment"
@@ -71,4 +74,9 @@
             android:id="@+id/action_deliveryAddressFragment_to_paymentFragment"
             app:destination="@id/paymentFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/paymentSuccessfulFragment"
+        android:name="com.steve_md.joomia.ui.fragments.main.PaymentSuccessfulFragment"
+        android:label="fragment_payment_successful"
+        tools:layout="@layout/fragment_payment_successful" />
 </navigation>
