@@ -14,6 +14,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.view.isVisible
+import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
@@ -27,6 +28,12 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class ProductDetailsFragment : Fragment() {
+
+    companion object {
+
+        const val TAG = "CustomBottomSheetDialogFragment"
+
+    }
 
     private lateinit var binding: FragmentProductDetailsBinding
     private val viewModel by viewModels<CartViewModel>()
@@ -66,7 +73,7 @@ class ProductDetailsFragment : Fragment() {
             cartBadge?.text = (cartBadgeValue + 1).toString()
 
             //Pop up ModalBottomSheet
-            initiateModalBottomSheet()
+            initiateModalBottomSheet(modalBottomSheetDialogFragment = ModalBottomSheetDialogFragment())
 
             /*
             * navigateToCheckout()
@@ -79,9 +86,9 @@ class ProductDetailsFragment : Fragment() {
     }
 
     // Calling ModalBottomSheetClass in MainActivity
-    private fun initiateModalBottomSheet() {
+    private fun initiateModalBottomSheet(modalBottomSheetDialogFragment: ModalBottomSheetDialogFragment) {
         ModalBottomSheetDialogFragment().apply {
-
+            fragmentManager?.beginTransaction()?.let { modalBottomSheetDialogFragment.show(it,tag) }
         }
     }
 
