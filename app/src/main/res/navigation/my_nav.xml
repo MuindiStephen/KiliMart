@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_homeFragment_to_addToCartFragment"
             app:destination="@id/addToCartFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_accountProfileFragment3"
+            app:destination="@id/accountProfileFragment3" />
 
     </fragment>
     <fragment
@@ -83,4 +86,9 @@
             android:id="@+id/action_paymentSuccessfulFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/accountProfileFragment"
+        android:name="com.steve_md.joomia.ui.fragments.main.AccountProfileFragment"
+        android:label="fragment_account_profile"
+        tools:layout="@layout/fragment_account_profile" />
 </navigation>

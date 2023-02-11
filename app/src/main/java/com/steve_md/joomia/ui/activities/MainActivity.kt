@@ -48,6 +48,9 @@ class MainActivity : AppCompatActivity() {
                 R.id.paymentFragment -> {
                     binding.bottomNavigationView.visibility = View.VISIBLE
                 }
+                R.id.accountProfileFragment -> {
+                    binding.bottomNavigationView.visibility = View.VISIBLE
+                }
 
                 else -> {
                     binding.bottomNavigationView.visibility = View.INVISIBLE

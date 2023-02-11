@@ -13,5 +13,9 @@
         android:id="@+id/paymentFragment"
         android:title="Pay"
         android:icon="@drawable/ic_payments"/>
+    <item
+        android:id="@+id/accountProfileFragment"
+        android:title="Account"
+        android:icon="@drawable/ic_person3"/>
 
 </menu>
