@@ -13,20 +13,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.steve_md.joomia.R
 import com.steve_md.joomia.databinding.FragmentProductDetailsBinding
+import com.steve_md.joomia.ui.fragments.main.ModalBottomSheetDialogFragment
 import com.steve_md.joomia.util.CartCounter
 import com.steve_md.joomia.util.CartCounter.counter
 import com.steve_md.joomia.viewmodel.CartViewModel
-import com.steve_md.joomia.viewmodel.ProductsViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.Job
 
 @AndroidEntryPoint
 class ProductDetailsFragment : Fragment() {
@@ -63,21 +60,29 @@ class ProductDetailsFragment : Fragment() {
         binding.buttonAddToCart.setOnClickListener {
             viewModel.insertItemToCartLine(productsItem)
 
-            val cartBadge:TextView? = view?.findViewById(R.id.cartBadge)
+            val cartBadge: TextView? = view?.findViewById(R.id.cartBadge)
             val cartBadgeValue = 0
             cartBadge?.id = cartBadgeValue
-            cartBadge?.text = (cartBadgeValue +1).toString()
+            cartBadge?.text = (cartBadgeValue + 1).toString()
 
+            //Pop up ModalBottomSheet
+            initiateModalBottomSheet()
 
-
-            itemAddedToCart()
-            navigateToCheckout()
-            increaseCounterItemIcon()
+            /*
+            * navigateToCheckout()
+            * increaseCounterItemIcon()
+           */
         }
 
 
-        val root = binding.root
-        return root
+        return binding.root
+    }
+
+    // Calling ModalBottomSheetClass in MainActivity
+    private fun initiateModalBottomSheet() {
+        ModalBottomSheetDialogFragment().apply {
+
+        }
     }
 
     private fun increaseCounterItemIcon() {
@@ -100,17 +105,14 @@ class ProductDetailsFragment : Fragment() {
         }
     }
 
-    private fun navigateToCheckout() {
-        findNavController().navigate(R.id.action_productDetailsFragment_to_addToCartFragment)
-    }
 
-    private fun itemAddedToCart() {
-        Toast.makeText(
-            requireContext(),
-            "Item has been added to cart",
-            Toast.LENGTH_LONG
-        ).show()
-    }
+        /*      private fun navigateToCheckout() {
+                     findNavController().navigate(R.id.action_productDetailsFragment_to_addToCartFragment)
+                }
+
+                 private fun itemAddedToCart() { }
+
+     */
 
 
 }
