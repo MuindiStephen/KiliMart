@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.steve_md.joomia.databinding.FragmentAccountProfileBinding
 
 class AccountProfileFragment : Fragment() {
@@ -30,6 +31,17 @@ class AccountProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        setUpBinding()
+    }
+
+    private fun setUpBinding() {
+        binding.btnLogOut.setOnClickListener { activity?.finishAffinity() }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        binding
     }
 
 

@@ -27,10 +27,13 @@
             app:popUpToInclusive="false" />
         <action
             android:id="@+id/action_homeFragment_to_addToCartFragment"
-            app:destination="@id/addToCartFragment" />
+            app:destination="@id/addToCartFragment"
+            app:popUpTo="@id/homeFragment" />
         <action
             android:id="@+id/action_homeFragment_to_accountProfileFragment"
-            app:destination="@id/accountProfileFragment" />
+            app:destination="@id/accountProfileFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/homeFragment" />
 
     </fragment>
     <fragment

@@ -34,6 +34,15 @@ class PaymentSuccessfulFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setUpBinding()
+        setUpAnimation()
+    }
+
+    private fun setUpAnimation() {
+       binding.apply {
+           paymentSuccessLottieAnimationView.setAnimation(R.raw.success_popup)
+           paymentSuccessLottieAnimationView.repeatCount = 0 //Never Repeat
+           paymentSuccessLottieAnimationView.playAnimation()
+       }
     }
 
     private fun setUpBinding() {

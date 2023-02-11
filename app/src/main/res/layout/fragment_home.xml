@@ -152,7 +152,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:textSize="22sp"
+        android:textSize="18sp"
         android:fontFamily="@font/nunito_sans_semibold"
         android:text="@string/what_would_you_like_to_buy_today"
         app:layout_constraintBottom_toTopOf="@+id/recyclerView"
