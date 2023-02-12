@@ -12,6 +12,7 @@ import timber.log.Timber
 class HiltApp : Application() {
     override fun onCreate() {
         super.onCreate()
+        // Timber for logging
         getTimber()
     }
 
