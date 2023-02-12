@@ -9,4 +9,8 @@
     <string name="my_profile">My Profile</string>
     <string name="stephen_muindi">Stephen Muindi</string>
     <string name="stephenmuindi241_gmail_com">stephenmuindi241@gmail.com</string>
+    <string name="product_name">Product name</string>
+    <string name="product_title_description">Product title description</string>
+    <string name="_10_00">$10.00</string>
+    <string name="add_to_cart">Add to Cart</string>
 </resources>

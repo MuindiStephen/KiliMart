@@ -16,6 +16,7 @@ import android.widget.TextView
 import androidx.core.view.isVisible
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.steve_md.joomia.R
@@ -67,13 +68,16 @@ class ProductDetailsFragment : Fragment() {
         binding.buttonAddToCart.setOnClickListener {
             viewModel.insertItemToCartLine(productsItem)
 
+            //Pop up ModalBottomSheet
+            initiateModalBottomSheet()
+
+
             val cartBadge: TextView? = view?.findViewById(R.id.cartBadge)
             val cartBadgeValue = 0
             cartBadge?.id = cartBadgeValue
             cartBadge?.text = (cartBadgeValue + 1).toString()
 
-            //Pop up ModalBottomSheet
-            initiateModalBottomSheet(modalBottomSheetDialogFragment = ModalBottomSheetDialogFragment())
+
 
             /*
             * navigateToCheckout()
@@ -85,16 +89,14 @@ class ProductDetailsFragment : Fragment() {
         return binding.root
     }
 
-    // Calling ModalBottomSheetClass in MainActivity
-    private fun initiateModalBottomSheet(modalBottomSheetDialogFragment: ModalBottomSheetDialogFragment) {
-        ModalBottomSheetDialogFragment().apply {
-            fragmentManager?.beginTransaction()?.let { modalBottomSheetDialogFragment.show(it,tag) }
-        }
+    // Calling ModalBottomSheetClass in ProductsDetailsFragment
+    private fun initiateModalBottomSheet() {
+        findNavController().navigate(R.id.action_productDetailsFragment_to_modalBottomSheetDialogFragment)
     }
 
     private fun increaseCounterItemIcon() {
         sharedPreferences = requireActivity().getSharedPreferences("Cart Counter Shared Preferences", Context.MODE_PRIVATE)
-        sharedIdValue = sharedPreferences.getInt(CartCounter.counter.toString(), 0)
+        sharedIdValue = sharedPreferences.getInt(counter.toString(), 0)
 
         sharedPreferences.edit()
             .putInt(counter.toString(),sharedPreferences.getInt(counter.toString(),0)+1)

@@ -53,6 +53,9 @@
         <action
             android:id="@+id/action_productDetailsFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_productDetailsFragment_to_modalBottomSheetDialogFragment"
+            app:destination="@id/modalBottomSheetDialogFragment" />
     </fragment>
     <fragment
         android:id="@+id/addToCartFragment"
@@ -97,4 +100,15 @@
         android:name="com.steve_md.joomia.ui.fragments.main.AccountProfileFragment"
         android:label="fragment_account_profile"
         tools:layout="@layout/fragment_account_profile" />
+    <dialog
+        android:id="@+id/modalBottomSheetDialogFragment"
+        android:name="com.steve_md.joomia.ui.fragments.main.ModalBottomSheetDialogFragment"
+        android:label="ModalBottomSheetDialogFragment" >
+        <action
+            android:id="@+id/action_modalBottomSheetDialogFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_modalBottomSheetDialogFragment_to_addToCartFragment"
+            app:destination="@id/addToCartFragment" />
+    </dialog>
 </navigation>
