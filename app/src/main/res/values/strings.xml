@@ -13,4 +13,6 @@
     <string name="product_title_description">Product title description</string>
     <string name="_10_00">$10.00</string>
     <string name="add_to_cart">Add to Cart</string>
+    <string name="how_would_you_like_to_receive_your_verification_code">How would you like to receive your verification code??</string>
+    <string name="confirm">CONFIRM</string>
 </resources>
