@@ -22,4 +22,9 @@
     <string name="vat">VAT</string>
     <string name="ksh_40_00">Ksh 40.00</string>
     <string name="ksh_1380_00">Ksh 1380.00</string>
+    <array name="shopping_process">
+        <item>Cart</item>
+        <item>Payment</item>
+        <item>Checkout</item>
+    </array>
 </resources>
