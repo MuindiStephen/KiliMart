@@ -12,17 +12,16 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/cartLineItemsRecyclerView"
-            android:layout_width="370dp"
+            android:layout_width="match_parent"
             android:layout_height="440dp"
             android:layout_marginBottom="100dp"
             android:orientation="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toTopOf="@+id/cartSubTotal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
             tools:listitem="@layout/cart_item_row" />
 
         <RelativeLayout
@@ -37,10 +36,84 @@
             android:layout_marginBottom="50dp">
 
             <TextView
+                android:id="@+id/subTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+                android:text="Sub total"
+                android:textColor="@color/white"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:layout_marginStart="16dp"
                 />
+
+            <TextView
+                android:id="@+id/subTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/subTotal"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="9dp"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="@string/ksh_1340_00"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/numberOfItemsInTheCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/subTotal"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="@string/_1_item"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/VAT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/numberOfItemsInTheCart"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="@string/vat"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/totalVAT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="44dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignEnd="@+id/VAT"
+                android:layout_marginEnd="9dp"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="@string/ksh_40_00"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/Total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/VAT"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="@string/_1_item"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/totalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/totalVAT"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="9dp"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="@string/ksh_1380_00"
+                android:textColor="@color/white" />
 
 
         </RelativeLayout>

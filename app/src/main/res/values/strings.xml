@@ -17,4 +17,9 @@
     <string name="confirm">CONFIRM</string>
     <string name="your_cart_is_empty">Your Cart is empty!</string>
     <string name="proceed_to_payment">PROCEED TO PAYMENT</string>
+    <string name="ksh_1340_00">Ksh 1340.00</string>
+    <string name="_1_item">1 item</string>
+    <string name="vat">VAT</string>
+    <string name="ksh_40_00">Ksh 40.00</string>
+    <string name="ksh_1380_00">Ksh 1380.00</string>
 </resources>
