@@ -15,4 +15,6 @@
     <string name="add_to_cart">Add to Cart</string>
     <string name="how_would_you_like_to_receive_your_verification_code">How would you like to receive your verification code??</string>
     <string name="confirm">CONFIRM</string>
+    <string name="your_cart_is_empty">Your Cart is empty!</string>
+    <string name="proceed_to_payment">PROCEED TO PAYMENT</string>
 </resources>
