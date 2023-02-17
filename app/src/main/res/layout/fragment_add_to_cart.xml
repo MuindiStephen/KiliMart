@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     tools:context=".ui.fragments.home.AddToCartFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -39,7 +40,7 @@
                 android:id="@+id/subTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sub total"
+                android:text="@string/sub_total"
                 android:textColor="@color/white"
                 android:fontFamily="@font/nunito_sans_semibold"
                 android:layout_marginStart="16dp"
@@ -165,7 +166,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="START SHOPPING"
+        android:text="@string/start_shopping"
         android:visibility="gone"
         android:fontFamily="@font/nunito_sans_semibold"
         app:layout_constraintEnd_toEndOf="parent"
