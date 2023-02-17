@@ -129,6 +129,7 @@
         android:fontFamily="@font/nunito_sans_semibold"
         android:text="@string/proceed_to_payment"
         android:textSize="11sp"
+        android:background="@drawable/custom_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

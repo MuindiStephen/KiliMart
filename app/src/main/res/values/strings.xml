@@ -24,6 +24,8 @@
     <string name="ksh_1380_00">Ksh 1380.00</string>
     <string name="sub_total">Sub total</string>
     <string name="start_shopping">START SHOPPING</string>
+    <string name="remove">REMOVE</string>
+    <string name="_1">1</string>
     <array name="shopping_process">
         <item>Cart</item>
         <item>Payment</item>
