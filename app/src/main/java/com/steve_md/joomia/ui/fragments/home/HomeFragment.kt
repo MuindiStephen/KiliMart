@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import androidx.core.view.isVisible
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -44,7 +45,22 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        binding = FragmentHomeBinding.inflate(
+            inflater, container, false
+        )
+
+         /*
+         - LayoutInflater
+         - layoutId
+         - viewGroup
+         - attachToParent
+
+       binding = DataBindingUtil.inflate(layoutInflater,
+           R.layout.fragment_home,container,
+           false)
+
+           */
+
 
         // Search
         binding.searchProduct.setOnEditorActionListener { v, actionId, event ->
