@@ -128,7 +128,7 @@ dependencies {
     implementation 'org.jsoup:jsoup:1.13.1'
 
     // StepView
-    implementation 'com.shuhart.stepview:stepview:1.5.1'
+//    implementation 'com.shuhart.stepview:stepview:1.5.1'
 
 
 

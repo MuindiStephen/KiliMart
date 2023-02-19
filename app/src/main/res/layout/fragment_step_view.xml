@@ -10,6 +10,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.main.StepView">
 
-    <sh
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

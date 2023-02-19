@@ -34,7 +34,7 @@
             android:text="Delivery Address"
             android:fontFamily="@font/nunito_sans_semibold"
             android:textColor="@color/white"
-            android:textSize="28sp"/>
+            android:textSize="24sp"/>
     </LinearLayout>
 
     <androidx.fragment.app.FragmentContainerView
