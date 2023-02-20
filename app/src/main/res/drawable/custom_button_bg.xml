@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright (c)  Stephen Muindi
-  -->
-
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <stroke android:color="@color/yellow_red" />
-    <corners android:radius="10dp"/>
-    <solid android:color="@color/yellow_red"/>
-</shape>
