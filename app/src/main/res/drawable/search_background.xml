@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c)  Stephen Muindi
+  -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <stroke
         android:width="1dp"
-        android:color="@color/yellow" />
-    <corners android:radius="5dp" />
+        android:color="@color/yellow_red" />
+    <corners android:radius="10dp" />
     <solid android:color="@android:color/transparent" />
 </shape>

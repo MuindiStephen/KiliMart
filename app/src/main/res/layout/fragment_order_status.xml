@@ -72,6 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/textView18"
+            android:layout_alignParentStart="true"
             android:layout_marginStart="20dp"
             android:fontFamily="@font/nunito_sans_semibold"
             android:text="@string/_30_minutes"
@@ -84,8 +85,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_alignStart="@id/textView18"
             android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignEnd="@id/textView18"
             android:fontFamily="@font/nunito_sans_semibold"
             android:text="@string/order_id" />
 
@@ -233,9 +235,10 @@
         android:layout_height="60dp"
         android:text="@string/accept_order"
         android:textAllCaps="false"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/nunito_sans_semibold"
-        android:background="@drawable/custom_background"
+        android:textColor="@color/black"
+        android:background="@drawable/button_background"
         app:layout_constraintStart_toStartOf="@+id/imageView13"
         app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
@@ -243,15 +246,16 @@
         android:id="@+id/buttonDeclineOrder"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/custom_background"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/button_background"
         android:fontFamily="@font/nunito_sans_semibold"
         android:text="@string/decline_order"
         android:textAllCaps="false"
-        android:layout_marginStart="240dp"
+        android:layout_marginStart="200dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/buttonAcceptOrder"
         app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
 
