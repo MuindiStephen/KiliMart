@@ -12,5 +12,7 @@ fun Fragment.hideKeyboard(): Boolean {
 }
 
 fun Fragment.toast(message: String) {
-    Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+    Toast.makeText(requireContext(),
+        message,
+        Toast.LENGTH_SHORT).show()
 }

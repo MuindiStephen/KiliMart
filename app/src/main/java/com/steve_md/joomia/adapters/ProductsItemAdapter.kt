@@ -16,8 +16,7 @@ import com.steve_md.joomia.databinding.ProductListItemBinding
 import com.steve_md.joomia.model.ProductsItem
 import com.steve_md.joomia.ui.fragments.home.HomeFragmentDirections
 
-class ProductsItemAdapter :
-    ListAdapter<ProductsItem, ProductsItemAdapter.MyViewHolder>(MyDiffUtil) {
+class ProductsItemAdapter : ListAdapter<ProductsItem, ProductsItemAdapter.MyViewHolder>(MyDiffUtil) {
     object MyDiffUtil : DiffUtil.ItemCallback<ProductsItem>(){
         override fun areItemsTheSame(oldItem: ProductsItem, newItem: ProductsItem): Boolean {
             return oldItem == newItem

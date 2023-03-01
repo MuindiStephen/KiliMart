@@ -5,12 +5,10 @@
 package com.steve_md.joomia.ui.fragments.main
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import com.steve_md.joomia.R
+import androidx.fragment.app.Fragment
 import com.steve_md.joomia.databinding.FragmentStepViewBinding
 
 
@@ -20,7 +18,7 @@ class StepView : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         bindingStepView = FragmentStepViewBinding.inflate(
             inflater,container,false
@@ -28,5 +26,6 @@ class StepView : Fragment() {
 
        return bindingStepView.root
     }
+
 
 }
