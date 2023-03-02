@@ -42,6 +42,7 @@ class DeliveryAddressFragment : Fragment() {
     /**
      * A request code is any int value that identifies
      * the return result when the result arrives
+     * -> This code identifies specific permission request
      **/
     private val LOCATION_REQUEST_CODE = 101
 
@@ -57,16 +58,36 @@ class DeliveryAddressFragment : Fragment() {
             container,
             false
         )
+
+        //val mapFragment =
         return binding.root
     }
 
-    // include a map here
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         setUpBinding()
         setUpMapPermissions()
     }
+
+    private fun setUpBinding() {
+        binding.imageViewBackToCheck.setOnClickListener { findNavController().navigateUp() }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     override fun onRequestPermissionsResult(
         requestCode: Int,
@@ -116,9 +137,7 @@ class DeliveryAddressFragment : Fragment() {
             arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_REQUEST_CODE)
     }
 
-    private fun setUpBinding() {
-        binding.imageViewBackToCheck.setOnClickListener { findNavController().navigateUp() }
-    }
+
 
     companion object {
         private const val TAG = "DeliveryAddressFragment"
