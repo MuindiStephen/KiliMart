@@ -11,6 +11,10 @@ import com.steve_md.joomia.data.local.entity.CartEntity
 import com.steve_md.joomia.model.ProductsItem
 
 
+/*
+*  The Schema of room Database changes when more entities are added
+* to the database
+ */
 @Database(exportSchema = false, version = 2, entities = [ProductsItem::class, CartEntity::class])
 @TypeConverters
 abstract class ProductsDatabase : RoomDatabase() {

@@ -27,18 +27,37 @@ import com.steve_md.joomia.util.toast
 class DeliveryAddressFragment : Fragment() {
 
     private lateinit var binding:FragmentDeliveryAddressBinding
+
+    /**
+     *  Google Map - is the main class of Google Maps Android SDK
+     *  and entry class for all methods related to the Map
+     * */
     private lateinit var googleMap: GoogleMap
+
+    /*
+    SupportMapFragment -> The simplest way to place a map on an application
+     */
     private lateinit var maps:SupportMapFragment
-    private val LOCATION_REQUEST_CODE = 101
+
+    /**
+     * A request code is any int value that identifies
+     * the return result when the result arrives
+     **/
+    private var LOCATION_REQUEST_CODE = 101
+
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        binding = FragmentDeliveryAddressBinding.inflate(inflater, container, false)
-        val root = binding.root
-        return root
+        binding = FragmentDeliveryAddressBinding.inflate(
+            inflater,
+            container,
+            false
+        )
+        return binding.root
     }
 
     // include a map here
