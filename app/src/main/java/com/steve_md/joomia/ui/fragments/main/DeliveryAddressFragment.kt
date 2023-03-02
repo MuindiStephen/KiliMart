@@ -43,7 +43,7 @@ class DeliveryAddressFragment : Fragment() {
      * A request code is any int value that identifies
      * the return result when the result arrives
      **/
-    private var LOCATION_REQUEST_CODE = 101
+    private val LOCATION_REQUEST_CODE = 101
 
 
     override fun onCreateView(
@@ -87,13 +87,14 @@ class DeliveryAddressFragment : Fragment() {
 
     private fun setUpMaps() {
         maps = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
-        maps.getMapAsync(OnMapReadyCallback {
-            googleMap = it
+        maps.getMapAsync(OnMapReadyCallback { googleMap ->
+            this.googleMap = googleMap
 
             val location = LatLng(-1.2324779, 36.8765912)
             googleMap.addMarker(MarkerOptions().position(location).title("Nairobi, Kenya"))
             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location, 10f))
         })
+
     }
 
     private fun setUpMapPermissions() {
