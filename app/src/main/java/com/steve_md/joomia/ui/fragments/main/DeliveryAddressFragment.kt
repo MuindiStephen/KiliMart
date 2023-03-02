@@ -86,7 +86,7 @@ class DeliveryAddressFragment : Fragment() {
     }
 
     private fun setUpMaps() {
-        maps = childFragmentManager.findFragmentById(R.id.mapFragment) as SupportMapFragment
+       // maps = childFragmentManager.findFragmentById(R.id.mapFragment) as SupportMapFragment
         maps.getMapAsync(OnMapReadyCallback { googleMap ->
             this.googleMap = googleMap
 
@@ -118,6 +118,10 @@ class DeliveryAddressFragment : Fragment() {
 
     private fun setUpBinding() {
         binding.imageViewBackToCheck.setOnClickListener { findNavController().navigateUp() }
+    }
+
+    companion object {
+        private const val TAG = "DeliveryAddressFragment"
     }
 
 }
