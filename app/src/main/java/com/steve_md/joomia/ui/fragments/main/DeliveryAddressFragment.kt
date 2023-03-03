@@ -34,9 +34,10 @@ class DeliveryAddressFragment : Fragment() {
      * */
     private lateinit var googleMap: GoogleMap
 
-    /*
-    SupportMapFragment -> The simplest way to place a map on an application
-     */
+    /**
+     * SupportMapFragment -> The simplest way to place a map on an application
+     *
+     **/
     private lateinit var maps:SupportMapFragment
 
     /**
@@ -73,19 +74,6 @@ class DeliveryAddressFragment : Fragment() {
     private fun setUpBinding() {
         binding.imageViewBackToCheck.setOnClickListener { findNavController().navigateUp() }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
