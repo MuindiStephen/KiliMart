@@ -6,25 +6,33 @@ package com.steve_md.joomia.ui.fragments.main
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.location.Location
+import android.location.LocationListener
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 import com.steve_md.joomia.R
 import com.steve_md.joomia.databinding.FragmentDeliveryAddressBinding
 
-class DeliveryAddressFragment : Fragment() {
+class DeliveryAddressFragment : Fragment() , OnMapReadyCallback, LocationListener, GoogleApiClient.ConnectionCallbacks{
 
     private lateinit var binding: FragmentDeliveryAddressBinding
+    private lateinit var mlocation: Location
 
     /**
      *  Google Map - is the main class of Google Maps Android SDK
@@ -73,8 +81,37 @@ class DeliveryAddressFragment : Fragment() {
         setUpLocationClient()
         setUpPermissions()
 
+
     }
 
+    /*
+     * Initialises map and is called everytime map is to be called
+    **/
+    override fun onMapReady(p0: GoogleMap) {
+        setUpPermissions()
+        googleMap = p0
+
+        }
+
+    override fun onLocationChanged(location: Location) {
+      mlocation = location
+
+        val location = googleMap.isMyLocationEnabled
+        val latLng = LatLng(mlocation.latitude,mlocation.longitude)
+        googleMap.addMarker(MarkerOptions().position(latLng).title("Your Delivery Address Found"))
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10f))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,16.0f))
+
+    }
+
+    override fun onConnected(p0: Bundle?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onConnectionSuspended(p0: Int) {
+        TODO("Not yet implemented")
+    }
+}
 
 
     private fun setUpBinding() {
@@ -105,13 +142,3 @@ class DeliveryAddressFragment : Fragment() {
         ActivityCompat.requestPermissions(requireActivity(),
             arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_REQUEST_CODE)
     }
-
-    private fun setUpMaps() {
-        mapFragment = childFragmentManager.findFragmentById(R.id.mapFragment) as SupportMapFragment
-        mapFragment.getMapAsync(OnMapReadyCallback { googleMap ->
-            this.googleMap = googleMap
-        })
-    }
-
-
-}
