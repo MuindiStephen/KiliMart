@@ -12,15 +12,21 @@ import android.widget.Button
 import androidx.cardview.widget.CardView
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.steve_md.joomia.R
+import com.steve_md.joomia.util.snackBar
 
-class MobileMoneyModalBottomSheet : BottomSheetDialogFragment(){
+
+class MobileMoneyModalBottomSheet : BottomSheetDialogFragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflating MobileMoney layout to this fragment
-        return inflater.inflate(R.layout.mobilem_money_payment_bottom_sheet_layout, container, false)
+        return inflater.inflate(
+            R.layout.mobilem_money_payment_bottom_sheet_layout,
+            container,
+            false
+        )
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -32,9 +38,16 @@ class MobileMoneyModalBottomSheet : BottomSheetDialogFragment(){
 
         mpesa.setOnClickListener {
             buttonConfirm.isEnabled = it.isEnabled
+            /**
+             * TODO M-PESA STK Push implementation here
+             */
+
+           // findNavController().navigate()
+
         }
         airtel.setOnClickListener {
             buttonConfirm.isEnabled = it.isEnabled
+            snackBar()
         }
     }
 }

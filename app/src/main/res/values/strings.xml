@@ -41,6 +41,8 @@
     <string name="decline_order">Decline Order</string>
     <string name="back">back</string>
     <string name="step">step</string>
+    <string name="how_do_you_want_to_pay_your_goods">How do you want to pay your goods?</string>
+    <string name="mobile_money">Mobile Money</string>
     <array name="shopping_process">
         <item>Cart</item>
         <item>Payment</item>

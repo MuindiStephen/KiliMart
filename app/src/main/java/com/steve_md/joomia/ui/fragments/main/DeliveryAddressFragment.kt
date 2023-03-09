@@ -26,10 +26,10 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.steve_md.joomia.R
 import com.steve_md.joomia.databinding.FragmentDeliveryAddressBinding
 
-class DeliveryAddressFragment : Fragment() , OnMapReadyCallback, LocationListener, GoogleApiClient.ConnectionCallbacks{
+class DeliveryAddressFragment : Fragment() , OnMapReadyCallback, LocationListener,
+    GoogleApiClient.ConnectionCallbacks {
 
     private lateinit var binding: FragmentDeliveryAddressBinding
     private lateinit var mlocation: Location
@@ -71,37 +71,36 @@ class DeliveryAddressFragment : Fragment() , OnMapReadyCallback, LocationListene
         )
         return binding.root
     }
-
-
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setUpBinding()
-        setUpLocationClient()
+        binding.imageViewBackToCheck.setOnClickListener { findNavController().navigateUp() }
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(requireActivity())
         setUpPermissions()
-
 
     }
 
     /*
-     * Initialises map and is called everytime map is to be called
+     * Initialises map and is called everytime map is to be used
     **/
+    /*
     override fun onMapReady(p0: GoogleMap) {
         setUpPermissions()
         googleMap = p0
 
         }
 
-    override fun onLocationChanged(location: Location) {
-      mlocation = location
+     */
 
-        val location = googleMap.isMyLocationEnabled
+    override fun onLocationChanged(location: Location) {
+
+        mlocation = location
+
+        //val location = googleMap.isMyLocationEnabled
         val latLng = LatLng(mlocation.latitude,mlocation.longitude)
         googleMap.addMarker(MarkerOptions().position(latLng).title("Your Delivery Address Found"))
-        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10f))
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16.0f))
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,16.0f))
-
     }
 
     override fun onConnected(p0: Bundle?) {
@@ -113,13 +112,6 @@ class DeliveryAddressFragment : Fragment() , OnMapReadyCallback, LocationListene
     }
 }
 
-
-    private fun setUpBinding() {
-        binding.imageViewBackToCheck.setOnClickListener { findNavController().navigateUp() }
-    }
-    private fun setUpLocationClient() {
-       fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(requireActivity())
-    }
 
     /**
      * Using fine location because it gives accurate results

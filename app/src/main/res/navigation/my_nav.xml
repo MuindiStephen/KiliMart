@@ -76,7 +76,11 @@
         android:id="@+id/paymentFragment"
         android:name="com.steve_md.joomia.ui.fragments.home.PaymentFragment"
         android:label="fragment_payment"
-        tools:layout="@layout/fragment_payment" />
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_paymentFragment_to_mobileMoneyModalBottomSheet"
+            app:destination="@id/mobileMoneyModalBottomSheet" />
+    </fragment>
     <fragment
         android:id="@+id/deliveryAddressFragment"
         android:name="com.steve_md.joomia.ui.fragments.main.DeliveryAddressFragment"
@@ -111,4 +115,8 @@
             android:id="@+id/action_modalBottomSheetDialogFragment_to_addToCartFragment"
             app:destination="@id/addToCartFragment" />
     </dialog>
+    <dialog
+        android:id="@+id/mobileMoneyModalBottomSheet"
+        android:name="com.steve_md.joomia.ui.fragments.main.MobileMoneyModalBottomSheet"
+        android:label="MobileMoneyModalBottomSheet" />
 </navigation>

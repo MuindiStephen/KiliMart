@@ -64,9 +64,5 @@ class ModalBottomSheetDialogFragment : BottomSheetDialogFragment() {
 
 }
 
-   /* Since We need to Detach and also re-attach the
-   *ModalBottomSheetFragment on the Fragment's Activity at the same time
-   */
-
 
 
