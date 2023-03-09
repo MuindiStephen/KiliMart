@@ -50,7 +50,9 @@ class PaymentFragment : Fragment() {
         binding.paystackRl.setOnClickListener {
             binding.radioButtonPaystack.isChecked = true
             if (binding.radioButtonPaystack.isChecked) {
-
+                findNavController().navigate(R.id.action_paymentFragment_to_paystackPaymentFragment)
+            } else {
+                return@setOnClickListener
             }
         }
 
