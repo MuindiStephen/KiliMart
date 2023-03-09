@@ -32,7 +32,16 @@ class PaystackPaymentFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+        /*
+        Paystack API KEY
+        PSTK_PUBLIC_KEY="pk_test_359cdc41842728fd136567b62203efb25476e08d"
+        */
+
          setUpBinding()
+
+        //val price = 4000
+
 
     }
     private fun setUpBinding() {

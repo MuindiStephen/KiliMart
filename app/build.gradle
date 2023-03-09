@@ -134,8 +134,7 @@ dependencies {
     // StepView
 //    implementation 'com.shuhart.stepview:stepview:1.5.1'
 
-
-
-
+    // Paystack
+    implementation 'co.paystack.android:paystack:3.1.3'
 
 }
