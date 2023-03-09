@@ -7,17 +7,14 @@ package com.steve_md.joomia.ui.fragments.main
 import android.Manifest
 import android.content.pm.PackageManager
 import android.location.Location
-import android.location.LocationListener
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -26,10 +23,10 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.steve_md.joomia.R
 import com.steve_md.joomia.databinding.FragmentDeliveryAddressBinding
 
-class DeliveryAddressFragment : Fragment() , OnMapReadyCallback, LocationListener,
-    GoogleApiClient.ConnectionCallbacks {
+class DeliveryAddressFragment : Fragment() , OnMapReadyCallback {
 
     private lateinit var binding: FragmentDeliveryAddressBinding
     private lateinit var mlocation: Location
@@ -71,47 +68,32 @@ class DeliveryAddressFragment : Fragment() , OnMapReadyCallback, LocationListene
         )
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.imageViewBackToCheck.setOnClickListener { findNavController().navigateUp() }
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(requireActivity())
-        setUpPermissions()
+        setUpBinding()
 
+        setUpLocationClient()
+
+    }
+
+    private fun setUpLocationClient() {
+        fusedLocationProviderClient =
+            LocationServices.getFusedLocationProviderClient(requireActivity())
+    }
+
+    private fun setUpBinding() {
+        binding.imageViewBackToCheck.setOnClickListener { findNavController().navigateUp() }
     }
 
     /*
      * Initialises map and is called everytime map is to be used
     **/
-    /*
     override fun onMapReady(p0: GoogleMap) {
-        setUpPermissions()
         googleMap = p0
-
-        }
-
-     */
-
-    override fun onLocationChanged(location: Location) {
-
-        mlocation = location
-
-        //val location = googleMap.isMyLocationEnabled
-        val latLng = LatLng(mlocation.latitude,mlocation.longitude)
-        googleMap.addMarker(MarkerOptions().position(latLng).title("Your Delivery Address Found"))
-        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16.0f))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,16.0f))
+        setUpPermissions()
     }
-
-    override fun onConnected(p0: Bundle?) {
-        TODO("Not yet implemented")
-    }
-
-    override fun onConnectionSuspended(p0: Int) {
-        TODO("Not yet implemented")
-    }
-}
-
 
     /**
      * Using fine location because it gives accurate results
@@ -122,15 +104,28 @@ class DeliveryAddressFragment : Fragment() , OnMapReadyCallback, LocationListene
                 Manifest.permission.ACCESS_FINE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-           makeRequest()
-        }
-
-        else {
+            makeRequest()
+        } else {
             setUpMaps()
         }
     }
 
-    private fun makeRequest() {
-        ActivityCompat.requestPermissions(requireActivity(),
-            arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_REQUEST_CODE)
+    private fun setUpMaps() {
+
+        mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
+
+        mapFragment.getMapAsync(this@DeliveryAddressFragment)
+
+        val latLng = LatLng(mlocation.latitude, mlocation.longitude)
+        googleMap.addMarker(MarkerOptions().position(latLng).title("Your Delivery Address Found"))
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16.0f))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16.0f))
     }
+
+    private fun makeRequest() {
+        ActivityCompat.requestPermissions(
+            requireActivity(),
+            arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_REQUEST_CODE
+        )
+    }
+}
