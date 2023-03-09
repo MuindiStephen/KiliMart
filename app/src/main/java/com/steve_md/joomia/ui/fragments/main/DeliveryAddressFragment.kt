@@ -6,6 +6,8 @@ package com.steve_md.joomia.ui.fragments.main
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.graphics.Canvas
 import android.location.Location
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -21,11 +23,13 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptor
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.steve_md.joomia.R
 import com.steve_md.joomia.databinding.FragmentDeliveryAddressBinding
 import com.steve_md.joomia.util.toast
+
 
 class DeliveryAddressFragment : Fragment() , OnMapReadyCallback {
 
@@ -113,14 +117,43 @@ class DeliveryAddressFragment : Fragment() , OnMapReadyCallback {
 
     private fun setUpMaps() {
 
-        mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
+        mapFragment = childFragmentManager.findFragmentById(com.steve_md.joomia.R.id.map) as SupportMapFragment
 
         mapFragment.getMapAsync(this@DeliveryAddressFragment)
 
         val latLng = LatLng(mlocation.latitude, mlocation.longitude)
-        googleMap.addMarker(MarkerOptions().position(latLng).title("Your Delivery Address Found"))
+        googleMap.addMarker(MarkerOptions().position(latLng).title("Your Delivery Address Found")
+            .icon(bitmapDescriptorFromVector(this, com.steve_md.joomia.R.drawable.ic_delivered_point)))
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16.0f))
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16.0f))
+    }
+
+    private fun bitmapDescriptorFromVector(
+        deliveryAddressFragment: DeliveryAddressFragment,
+        icDeliveredPoint: Int
+    ): BitmapDescriptor? {
+        val background =
+            ContextCompat.getDrawable(requireContext(), com.steve_md.joomia.R.drawable.ic_delivered_point)
+
+        background!!.setBounds(0, 0, background.intrinsicWidth, background.intrinsicHeight)
+
+        val vectorDrawable = ContextCompat.getDrawable(requireContext(), icDeliveredPoint)
+        vectorDrawable!!.setBounds(
+            40,
+            20,
+            vectorDrawable.intrinsicWidth + 40,
+            vectorDrawable.intrinsicHeight + 20
+        )
+        val bitmap = Bitmap.createBitmap(
+            background.intrinsicWidth,
+            background.intrinsicHeight,
+            Bitmap.Config.ARGB_8888
+        )
+        val canvas = Canvas(bitmap)
+        background.draw(canvas)
+        vectorDrawable.draw(canvas)
+
+        return BitmapDescriptorFactory.fromBitmap(bitmap)
     }
 
     private fun makeRequest() {
