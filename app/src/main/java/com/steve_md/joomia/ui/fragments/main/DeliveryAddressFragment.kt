@@ -5,6 +5,7 @@
 package com.steve_md.joomia.ui.fragments.main
 
 import android.Manifest
+import android.content.Context
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Canvas
@@ -123,26 +124,26 @@ class DeliveryAddressFragment : Fragment() , OnMapReadyCallback {
 
         val latLng = LatLng(mlocation.latitude, mlocation.longitude)
         googleMap.addMarker(MarkerOptions().position(latLng).title("Your Delivery Address Found")
-            .icon(bitmapDescriptorFromVector(this, com.steve_md.joomia.R.drawable.ic_delivered_point)))
+            .icon(bitmapDescriptorFromVector(requireContext(), com.steve_md.joomia.R.drawable.ic_delivered_point)))
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16.0f))
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16.0f))
     }
 
     private fun bitmapDescriptorFromVector(
-        deliveryAddressFragment: DeliveryAddressFragment,
+        context: Context,
         icDeliveredPoint: Int
     ): BitmapDescriptor? {
         val background =
-            ContextCompat.getDrawable(requireContext(), com.steve_md.joomia.R.drawable.ic_delivered_point)
+            ContextCompat.getDrawable(context, com.steve_md.joomia.R.drawable.ic_delivered_point)
 
         background!!.setBounds(0, 0, background.intrinsicWidth, background.intrinsicHeight)
 
         val vectorDrawable = ContextCompat.getDrawable(requireContext(), icDeliveredPoint)
         vectorDrawable!!.setBounds(
-            40,
-            20,
-            vectorDrawable.intrinsicWidth + 40,
-            vectorDrawable.intrinsicHeight + 20
+            0,
+            0,
+            vectorDrawable.intrinsicWidth,
+            vectorDrawable.intrinsicHeight
         )
         val bitmap = Bitmap.createBitmap(
             background.intrinsicWidth,
