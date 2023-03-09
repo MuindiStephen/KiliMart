@@ -1,11 +1,9 @@
 # KiliMart
 Consuming [FAKE STORE API](https://fakestoreapi.com/) to demonstrate online shop store.Built this app using the MVVM architecture, Kotlin Flows, (Uni-directional data flow), dagger hilt, viewmodel, Room  and Kotlin coroutines.
 
-## NB: Still in Progress 🚧 🛠️🛠️🛠️
 ## App General preview
  - Updated demos coming soon
-
-
+ 
 ## Tech Stack & Concepts
 - 
     * [Kotlin](https://kotlinlang.org/) - a cross-platform, statically typed, general-purpose programming language with type inference.
@@ -27,12 +25,14 @@ Consuming [FAKE STORE API](https://fakestoreapi.com/) to demonstrate online shop
 - Shimmer Effect
 - Lottie Animations
 - Shared Preferences
-- Datastore 
+- Datastore
 
+## Payment Integration Gateways
+ * [Paystack](https://paystack.com/docs/guides/accept_payments_on_your_android_app/)
+ * [Mpesa-Daraja-API](http://developer.safaricom.co.ke/)
 
-## Testing And Deployment
-- Circle CI & Docker
-
+## DevOps Tool
+- Circle CI 
 
 
 ```

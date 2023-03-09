@@ -80,6 +80,9 @@
         <action
             android:id="@+id/action_paymentFragment_to_mobileMoneyModalBottomSheet"
             app:destination="@id/mobileMoneyModalBottomSheet" />
+        <action
+            android:id="@+id/action_paymentFragment_to_paystackPaymentFragment"
+            app:destination="@id/paystackPaymentFragment" />
     </fragment>
     <fragment
         android:id="@+id/deliveryAddressFragment"
@@ -119,4 +122,9 @@
         android:id="@+id/mobileMoneyModalBottomSheet"
         android:name="com.steve_md.joomia.ui.fragments.main.MobileMoneyModalBottomSheet"
         android:label="MobileMoneyModalBottomSheet" />
+    <fragment
+        android:id="@+id/paystackPaymentFragment"
+        android:name="com.steve_md.joomia.ui.fragments.main.PaystackPaymentFragment"
+        android:label="fragment_paystack_payment"
+        tools:layout="@layout/fragment_paystack_payment" />
 </navigation>

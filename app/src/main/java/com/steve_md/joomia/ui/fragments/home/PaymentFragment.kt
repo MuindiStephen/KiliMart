@@ -31,11 +31,6 @@ class PaymentFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        /*
-        Paystack API KEY
-        PSTK_PUBLIC_KEY="pk_test_359cdc41842728fd136567b62203efb25476e08d"
-        */
-
         // Mobile Money
         binding.mobileMoneyRl.setOnClickListener {
             binding.radioButtonMobileMoney.isChecked = true
@@ -50,7 +45,9 @@ class PaymentFragment : Fragment() {
         binding.paystackRl.setOnClickListener {
             binding.radioButtonPaystack.isChecked = true
             if (binding.radioButtonPaystack.isChecked) {
-
+                findNavController().navigate(R.id.action_paymentFragment_to_paystackPaymentFragment)
+            } else {
+                return@setOnClickListener
             }
         }
 
