@@ -108,7 +108,7 @@ class PaystackPaymentFragment : Fragment() {
         val expiryMonth = cardExpiryArray[0].toInt()
         val expiryYear = cardExpiryArray[1].toInt()
 
-        val amount = 100
+        val amount = 400
 
         val card = Card(cardNumber, expiryMonth, expiryYear, cvv)
 
