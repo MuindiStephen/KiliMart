@@ -23,14 +23,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:src="@drawable/ic_baseline_arrow_back_24" />
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:contentDescription="@string/navigate"/>
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:text="Delivery Address"
+            android:text="@string/delivery_address"
             android:fontFamily="@font/nunito_sans_semibold"
             android:textColor="@color/white"
             android:textSize="24sp"/>
@@ -43,5 +44,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.fragments.main.DeliveryAddressFragment"/>
+    <Button
+        android:id="@+id/btnCheckDeliveryAddress"
+        android:backgroundTint="@color/yellow_red"
+        android:text="@string/checkout_address"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@id/mapFragment"
+        android:layout_marginBottom="100dp"/>
 
 </RelativeLayout>

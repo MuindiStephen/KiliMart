@@ -43,6 +43,15 @@
     <string name="step">step</string>
     <string name="how_do_you_want_to_pay_your_goods">How do you want to pay your goods?</string>
     <string name="mobile_money">Mobile Money</string>
+    <string name="checkout_address">Checkout Address</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="null">null</string>
+    <string name="navigate">navigate</string>
+    <string name="paystack">Paystack</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="paystack_payment">Paystack Payment</string>
+    <string name="card_number">Card Number</string>
+    <string name="pay_4000kes">Pay 4000Kes</string>
     <array name="shopping_process">
         <item>Cart</item>
         <item>Payment</item>
