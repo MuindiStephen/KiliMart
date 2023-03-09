@@ -25,6 +25,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.steve_md.joomia.R
 import com.steve_md.joomia.databinding.FragmentDeliveryAddressBinding
+import com.steve_md.joomia.util.toast
 
 class DeliveryAddressFragment : Fragment() , OnMapReadyCallback {
 
@@ -127,5 +128,22 @@ class DeliveryAddressFragment : Fragment() , OnMapReadyCallback {
             requireActivity(),
             arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_REQUEST_CODE
         )
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+
+        if (requestCode == LOCATION_REQUEST_CODE) {
+            if (grantResults.isNotEmpty() && grantResults.size == 1 && grantResults[0]  == PackageManager.PERMISSION_GRANTED) {
+                toast("Permission Granted")
+                setUpPermissions()
+            }
+        } else {
+                toast("Permission Denied")
+        }
     }
 }
