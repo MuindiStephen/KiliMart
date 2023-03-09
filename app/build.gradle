@@ -137,6 +137,9 @@ dependencies {
     // Paystack
     implementation 'co.paystack.android:paystack:3.1.3'
 
+    // Paypal SDK
+    implementation "com.paypal.sdk:paypal-android-sdk:2.16.0"
+
 }
 
 /*
