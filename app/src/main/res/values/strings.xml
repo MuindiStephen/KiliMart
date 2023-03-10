@@ -52,6 +52,9 @@
     <string name="paystack_payment">Paystack Payment</string>
     <string name="card_number">Card Number</string>
     <string name="pay_4000kes">Pay 4000Kes</string>
+    <string name="paypal">Paypal</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="enter_amount">Enter Amount</string>
     <array name="shopping_process">
         <item>Cart</item>
         <item>Payment</item>
