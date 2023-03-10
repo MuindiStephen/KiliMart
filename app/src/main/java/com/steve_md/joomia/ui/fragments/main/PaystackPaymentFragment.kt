@@ -52,6 +52,7 @@ class PaystackPaymentFragment : Fragment() {
 
          setUpBinding()
         initializePaystack()
+        initializeFormVariables()
 
         //val price = 4000
 
