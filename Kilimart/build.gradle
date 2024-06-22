@@ -1,10 +1,10 @@
 plugins {
     id 'com.android.application'
     id("kotlin-parcelize")
-    id 'kotlin-kapt'
     id 'kotlin-android'
     id("androidx.navigation.safeargs.kotlin")
     id 'com.google.dagger.hilt.android'
+    id 'com.google.devtools.ksp'
 }
 
 android {
@@ -38,6 +38,7 @@ android {
 
     buildFeatures {
         viewBinding true
+        //noinspection DataBindingWithoutKapt
         dataBinding true
     }
 }
@@ -66,7 +67,7 @@ dependencies {
 
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.14.2'
-    kapt 'com.github.bumptech.glide:compiler:4.14.2'
+    ksp 'com.github.bumptech.glide:compiler:4.14.2'
 
     // Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
@@ -100,13 +101,13 @@ dependencies {
     def room_version = "2.6.1"
 
     implementation("androidx.room:room-runtime:$room_version")
-    kapt ("androidx.room:room-compiler:$room_version")
+    ksp ("androidx.room:room-compiler:$room_version")
     implementation("androidx.room:room-ktx:$room_version")
-    implementation("androidx.room:room-common:2.5.0")
+    implementation("androidx.room:room-common:2.6.1")
 
     // Hilt
     implementation "com.google.dagger:hilt-android:2.50"
-    kapt "com.google.dagger:hilt-compiler:2.50"
+    ksp "com.google.dagger:hilt-compiler:2.50"
 
     // Lottie Animations
     def lottieVersion = "5.2.0"

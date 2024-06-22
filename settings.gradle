@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Joomia"
+rootProject.name = "KiliMart"
 include ':Kilimart'

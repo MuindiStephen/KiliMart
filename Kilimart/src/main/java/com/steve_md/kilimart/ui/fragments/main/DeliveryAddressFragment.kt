@@ -118,7 +118,7 @@ class DeliveryAddressFragment : Fragment() , OnMapReadyCallback {
 
     private fun setUpMaps() {
 
-        mapFragment = childFragmentManager.findFragmentById(com.steve_md.kilimart.R.id.map) as SupportMapFragment
+        mapFragment = childFragmentManager.findFragmentById(com.steve_md.kilimart.R.id.mapFragment) as SupportMapFragment
 
         mapFragment.getMapAsync(this@DeliveryAddressFragment)
 
