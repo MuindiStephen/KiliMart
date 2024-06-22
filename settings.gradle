@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Joomia"
-include ':app'
+include ':Kilimart'
