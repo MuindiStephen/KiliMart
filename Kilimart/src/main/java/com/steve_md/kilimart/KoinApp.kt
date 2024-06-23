@@ -5,7 +5,9 @@
 package com.steve_md.kilimart
 
 import android.app.Application
+import com.steve_md.kilimart.koin.repoModule
 import com.steve_md.kilimart.koin.retrofitModule
+import com.steve_md.kilimart.koin.retrofitModule2
 import com.steve_md.kilimart.koin.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -27,7 +29,9 @@ class KoinApp : Application() {
             modules(
                 listOf(
                     retrofitModule,
-                    viewModelModule
+                    viewModelModule,
+                    retrofitModule2,
+                    repoModule
                 )
             )
         }

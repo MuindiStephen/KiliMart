@@ -26,6 +26,12 @@ val retrofitModule = module {
     single { RepositoryModule }
 }
 
+val repoModule = module {
+    single<RepositoryModule> {
+        get()
+    }
+}
+
 
 val retrofitModule2 = module {
 
@@ -33,11 +39,10 @@ val retrofitModule2 = module {
         OkHttpClient().newBuilder().build()
 
     fun provideRetrofit(httpClient: OkHttpClient): Retrofit? {
-        val build = Retrofit.Builder().baseUrl(BASE_URL)
+        return Retrofit.Builder().baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(httpClient)
             .build()
-        return build
     }
 
     fun provideApiService(retrofit: Retrofit) = retrofit.create(ApiService::class.java)
