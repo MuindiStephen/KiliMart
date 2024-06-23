@@ -45,7 +45,7 @@
     <string name="mobile_money">Mobile Money</string>
     <string name="checkout_address">Checkout Address</string>
     <string name="delivery_address">Delivery Address</string>
-    <string name="null">null</string>
+    <string name="nothing">nnnn</string>
     <string name="navigate">navigate</string>
     <string name="paystack">Paystack</string>
     <string name="payment_method">Payment Method</string>

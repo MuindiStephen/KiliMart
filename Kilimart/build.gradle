@@ -4,7 +4,7 @@ plugins {
     id 'kotlin-android'
     id("androidx.navigation.safeargs.kotlin")
     id 'com.google.dagger.hilt.android'
-    id 'com.google.devtools.ksp'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -46,7 +46,7 @@ android {
 dependencies {
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.20"
+ //   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.20"
     implementation 'androidx.core:core-ktx:1.13.1'
     implementation 'androidx.appcompat:appcompat:1.7.0'
 
@@ -67,7 +67,7 @@ dependencies {
 
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.14.2'
-    ksp 'com.github.bumptech.glide:compiler:4.14.2'
+    kapt 'com.github.bumptech.glide:compiler:4.14.2'
 
     // Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
@@ -79,7 +79,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.2")
 
     // LiveData
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.2")
+    implementation("androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.2")
 
     // Lifecycles only (without ViewModel or LiveData)
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.2")
@@ -101,13 +101,13 @@ dependencies {
     def room_version = "2.6.1"
 
     implementation("androidx.room:room-runtime:$room_version")
-    ksp ("androidx.room:room-compiler:$room_version")
+    kapt ("androidx.room:room-compiler:$room_version")
     implementation("androidx.room:room-ktx:$room_version")
     implementation("androidx.room:room-common:2.6.1")
 
     // Hilt
     implementation "com.google.dagger:hilt-android:2.50"
-    ksp "com.google.dagger:hilt-compiler:2.50"
+    kapt "com.google.dagger:hilt-compiler:2.50"
 
     // Lottie Animations
     def lottieVersion = "5.2.0"
@@ -142,6 +142,14 @@ dependencies {
 
     // Paypal SDK
     implementation "com.paypal.sdk:paypal-android-sdk:2.16.0"
+
+    // KoIn
+    implementation("io.insert-koin:koin-android:3.6.0-wasm-alpha2")
+    implementation(platform("io.insert-koin:koin-bom:3.6.0-wasm-alpha2"))
+    implementation("io.insert-koin:koin-core")
+
+
+
 
 }
 
