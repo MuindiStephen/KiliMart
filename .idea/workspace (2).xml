@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dacc929d-1c6e-4063-84ed-cae243e216db" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/steve_md/joomia/ExampleInstrumentedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/androidTest/java/com/steve_md/joomia/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/debug/ic_launcher-playstore.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/debug/ic_launcher-playstore.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/debug/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/debug/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/debug/res/drawable/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/debug/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/debug/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/debug/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/debug/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/debug/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/debug/res/mipmap-hdpi/ic_app_logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/debug/res/mipmap-hdpi/ic_app_logo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/debug/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/debug/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/debug/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/debug/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/debug/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/debug/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/debug/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/debug/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/debug/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/debug/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/debug/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/debug/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/debug/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/debug/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/debug/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/debug/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/debug/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/debug/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/debug/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/debug/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/HiltApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/HiltApp.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/adapters/CartAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/adapters/CartAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/adapters/ProductsItemAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/adapters/ProductsItemAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/data/local/CartDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/data/local/CartDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/data/local/ProductsDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/data/local/ProductsDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/data/local/ProductsDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/data/local/ProductsDatabase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/data/local/entity/CartEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/data/local/entity/CartEntity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/data/local/mappers/Mappers.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/data/local/mappers/Mappers.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/data/remote/api/ApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/data/remote/api/ApiService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/data/remote/api/NetworkExceptionInterceptor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/data/remote/api/NetworkExceptionInterceptor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/data/repository/CartRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/data/repository/CartRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/data/repository/ProductsRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/data/repository/ProductsRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/di/DatabaseModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/di/DatabaseModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/di/NetworkModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/di/NetworkModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/di/RepositoryModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/di/RepositoryModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/model/Products.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/model/Products.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/model/ProductsItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/model/ProductsItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/model/Rating.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/model/Rating.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/ui/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/ui/activities/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/ui/fragments/home/AddToCartFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/ui/fragments/home/AddToCartFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/ui/fragments/home/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/ui/fragments/home/HomeFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/ui/fragments/home/PaymentFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/ui/fragments/home/PaymentFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/ui/fragments/home/ProductDetailsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/ui/fragments/home/ProductDetailsFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/ui/fragments/main/AccountProfileFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/ui/fragments/main/AccountProfileFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/ui/fragments/main/DeliveryAddressFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/ui/fragments/main/DeliveryAddressFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/ui/fragments/main/MobileMoneyModalBottomSheet.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/ui/fragments/main/MobileMoneyModalBottomSheet.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/ui/fragments/main/ModalBottomSheetDialogFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/ui/fragments/main/ModalBottomSheetDialogFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/ui/fragments/main/MpesaDarajaFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/ui/fragments/main/MpesaDarajaFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/ui/fragments/main/OrderStatusFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/ui/fragments/main/OrderStatusFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/ui/fragments/main/OrdersFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/ui/fragments/main/OrdersFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/ui/fragments/main/PaymentSuccessfulFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/ui/fragments/main/PaymentSuccessfulFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/ui/fragments/main/PaypalFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/ui/fragments/main/PaypalFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/ui/fragments/main/PaystackPaymentFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/ui/fragments/main/PaystackPaymentFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/ui/fragments/main/ScanProductFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/ui/fragments/main/ScanProductFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/ui/fragments/main/StepView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/ui/fragments/main/StepView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/ui/fragments/splash/SplashScreenFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/ui/fragments/splash/SplashScreenFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/util/ApiStates.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/util/ApiStates.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/util/CartCounter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/util/CartCounter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/util/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/util/Constants.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/util/ExtensionFunctions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/util/ExtensionFunctions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/util/NetworkBoundResource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/util/NetworkBoundResource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/util/PaypalConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/util/PaypalConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/viewmodel/CartViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/viewmodel/CartViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/viewmodel/ProductsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/viewmodel/ProductsViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/steve_md/joomia/viewmodel/SplashViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/java/com/steve_md/joomia/viewmodel/SplashViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_airtel.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable-v24/ic_airtel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_mpesa.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable-v24/ic_mpesa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/b.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/background_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/background_search.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/bg_paypal.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/bg_paypal.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/button_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/button_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/cart_badge.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/cart_badge.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/custom_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/custom_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/dotted.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/dotted.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/drop_shadow.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/drop_shadow.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_forward.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_arrow_forward.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_add_shopping_cart_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_baseline_add_shopping_cart_24.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_baseline_arrow_back_24.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_close_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_baseline_close_24.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_mobile_friendly_24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_baseline_mobile_friendly_24.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_circle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_circle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_delivered_point.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_delivered_point.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_delivered_to_.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_delivered_to_.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_kilimart.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_kilimart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_order_pick_up.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_order_pick_up.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_order_placed.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_order_placed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_order_received.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_order_received.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_payments.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_payments.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_paypal.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_paypal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_paystack.png" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_paystack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_person1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_person1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_person3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_person3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_person_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_person_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_products.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_products.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_question.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_question.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_remove_cart_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_remove_cart_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_shopping_cart.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/ic_shopping_cart.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/icon_material_payment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/icon_material_payment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/search_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/drawable/search_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/nunito_sans_semibold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/font/nunito_sans_semibold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/fragment_order_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout-land/fragment_order_status.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-sw600dp/fragment_order_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout-sw600dp/fragment_order_status.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/cart_item_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/cart_item_row.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/data_placeholder_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/data_placeholder_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_account_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/fragment_account_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_to_cart.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/fragment_add_to_cart.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_delivery_address.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/fragment_delivery_address.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_mpesa_daraja.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/fragment_mpesa_daraja.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_order_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/fragment_order_status.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_orders.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/fragment_orders.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_payment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/fragment_payment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_payment_successful.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/fragment_payment_successful.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_paypal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/fragment_paypal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_paystack_payment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/fragment_paystack_payment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_product_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/fragment_product_details.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_scan_product.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/fragment_scan_product.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_splash_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/fragment_splash_screen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_step_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/fragment_step_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_modal_bottom_sheet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/layout_modal_bottom_sheet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/mobilem_money_payment_bottom_sheet_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/mobilem_money_payment_bottom_sheet_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/product_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/layout/product_list_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/bottom_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/menu/bottom_navigation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/my_nav.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/navigation/my_nav.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/_add_to_cart.json" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/raw/_add_to_cart.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/animation.json" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/raw/animation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/empty_lottie.json" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/raw/empty_lottie.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/success_popup.json" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/raw/success_popup.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/values/dimen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/google_maps_api_key.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/values/google_maps_api_key.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/backup_rules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/steve_md/joomia/ExampleUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/test/java/com/steve_md/joomia/ExampleUnitTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/steve_md/joomia/viewmodel/ProductsViewModelTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kilimart/src/test/java/com/steve_md/joomia/viewmodel/ProductsViewModelTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2iFOMnD9SJ81QW6eAQutsaS4u1Y" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "master"
+  }
+}]]></component>
+  <component name="RunManager" selected="Android App.Kilimart">
+    <configuration name="Kilimart" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="Joomia.Kilimart.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="Joomia.app.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dacc929d-1c6e-4063-84ed-cae243e216db" name="Changes" comment="" />
+      <created>1719082813938</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719082813938</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
